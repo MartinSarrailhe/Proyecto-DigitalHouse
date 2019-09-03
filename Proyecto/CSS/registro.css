@@ -1,0 +1,17 @@
+.completar {
+  overflow: hidden;
+  
+}
+
+.Registro{
+float: left;
+
+}
+#Nombre{
+  margin: 45px;
+}
+
+#boton {
+  float: left;
+  padding: 20px;
+}
