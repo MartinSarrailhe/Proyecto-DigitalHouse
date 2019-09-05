@@ -115,7 +115,7 @@ h6 {
 
 }
 
-.maspopulares, .combosrecomendados{
+.maspopulares, .combosrecomendados, .ofertasespeciales{
 
   display: flex;
   flex-wrap: nowrap;
@@ -129,7 +129,7 @@ h6 {
 
 }
 
-.populares img, .combos img{
+.populares img, .combos img, .ofertas img{
 
   display: block;
   margin-left: auto;
@@ -138,4 +138,42 @@ h6 {
 
 }
 
-.combos
+.populares p, .combos p, .ofertas p {
+
+  text-align: center;
+
+}
+
+.banneramd {
+
+  width: 100%;
+
+}
+
+footer {
+
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+footer li, footer a {
+
+  color: white;
+  text-align: center;
+
+}
+
+.top {
+
+  font-size: 1.5em;
+
+}
+
+footer div {
+
+  width: 30%
+
+}
