@@ -175,7 +175,7 @@ h6 {
   color: white;
   padding: 7px;
   border-radius: 1000px;
-  font-size: 1.5em;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   font-weight: bolder;
 
 }
@@ -198,6 +198,47 @@ h6 {
 
   padding-top: 20px;
   font-family: 'Anton', sans-serif;
+
+}
+
+.ofertas {
+
+  padding-top: 80px;
+  position: relative;
+
+}
+
+.precio2{
+
+  background-color: darkgreen;
+  color: white;
+  padding: 7px;
+  border-radius: 1000px;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: bolder;
+
+}
+
+.modelo2{
+
+  position: absolute;
+  top: 0;
+  right: 20%;
+  left:20%;
+  font-family: 'Anton', sans-serif;
+  font-size: calc(12px + (22 - 12) * ((100vw - 300px) / (1600 - 300)));
+
+}
+
+.negado{
+
+  text-decoration: line-through;
+
+}
+
+.descuento{
+
+  font-family: 'Lexend Giga', sans-serif;
 
 }
 
