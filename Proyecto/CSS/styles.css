@@ -44,22 +44,24 @@ li {
 }
 
 .navdecategorias, .navderegister{
-
   display: flex;
-  width: 50%;
+}
 
-
+.navdecategorias{
+  width: 70%;
 }
 
 .navderegister {
 
+  width: 30%;
   justify-content: flex-end;
 
 }
 
 .titulos{
 
-  background-image: url("images/background.png");
+  background-image: url("../images/background.png");
+  color: white;
 
 }
 
@@ -68,9 +70,6 @@ h1 {
   font-size: 3em;
   margin-left: 40%;
   margin-right: 40%;
-  border-radius: 8px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.2);
 
 }
 
@@ -78,9 +77,15 @@ h1 {
 h1, h5 {
 
   text-align: center;
-  padding: 1%
 
 }
+
+h5 {
+
+  padding-bottom: 15px;
+
+}
+
 
 .bannernvidia {
 
@@ -121,14 +126,14 @@ h6 {
 
   width: 100%;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
 
 }
 
-.populares{
+.populares, .combos, .ofertas{
 
-  text-align: center;
+  flex-basis: 22%;
 
 }
 
@@ -197,8 +202,7 @@ footer div {
 
 footer img {
 
-  max-width: 50px;
-  max-height: 50px;
+  border-radius: 25px;
 
 }
 
@@ -210,12 +214,6 @@ footer img {
   width: 100%;
   justify-content: center;
   margin-top: 20px;
-
-}
-
-.redesociales li {
-
-
 
 }
 
