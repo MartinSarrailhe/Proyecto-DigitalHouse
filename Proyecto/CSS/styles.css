@@ -384,6 +384,30 @@ footer img {
   padding: 10px;
 }
 
+.checkboxrememberme {
+  text-align: end;
+  padding: 20px;
+}
+
+button.iniciosesion {
+  background-color: darkgreen;
+  color: white;
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.mismatch {
+  padding: 20px;
+}
+
+.norecuerdacontraseña {
+  text-decoration: underline;
+  color: blue;
+  padding: 20px;
+}
+
 /* Registro.html */
 
 .padre {
@@ -433,6 +457,14 @@ footer img {
 #enviar {
   margin: 10px;
   padding: 10px;
+}
+
+button#enviar {
+  background-color: darkgreen;
+  color: white;
+  padding: 5 25px;
+  border: solid 1px black;
+  border-radius: 5px;
 }
 
 @media (min-width:1050px) {
