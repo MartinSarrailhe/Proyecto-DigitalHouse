@@ -1,6 +1,8 @@
-.class {
-  overflow: hidden;
-}
-.login {
-  float: left;
+
+.access {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  justify-content: center;
+    align-items: center;
 }
