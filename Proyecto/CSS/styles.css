@@ -28,13 +28,14 @@ li {
 
 header{
 
-  background-image: url("../images/background.jpg");
-
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .logocontainer{
 
-  border-bottom: 1px solid white;
+  border-bottom: 2.5px solid white;
   display: flex;
   justify-content: center;
   background-repeat: no-repeat;
@@ -44,7 +45,6 @@ header{
 .seachbox {
 
   margin-right: 0;
-  height: 10px;
 
 }
 
@@ -71,6 +71,7 @@ header{
 
   width: 30%;
   justify-content: flex-end;
+  font-weight: bold;
 
 }
 
@@ -91,6 +92,12 @@ header{
 
   color: #5df5a2;
   font-weight: bold;
+
+}
+
+.fas {
+
+  color: white;
 
 }
 
@@ -142,13 +149,15 @@ hr {
 h6 {
 
   margin-top: 4%;
-  font-size: 2em;
+  font-size: calc(16px + (34 - 16) * ((100vw - 300px) / (1600 - 300)));
   font-family: 'Oswald', sans-serif;
   text-align: center;
-  width: 30%;
+  width: 50%;
   background-color: green;
   color: white;
   border-bottom: solid green;
+  word-spacing: 10px;
+  letter-spacing: 6px;
 
 }
 
@@ -294,6 +303,7 @@ footer li, footer a {
   color: white;
   text-align: center;
   padding-bottom: 10px;
+  line-height: 30px;
   font-family: 'Work Sans', sans-serif;
 
 }
@@ -339,5 +349,95 @@ footer img {
 .horario {
 
   font-weight: 600;
+
+}
+
+@media (min-width:1050px) {
+
+  .menu, .navdecategorias li:nth-child(2) {
+
+    display: none;
+
+  }
+
+}
+
+@media (min-width:768px) and (max-width:1050px) {
+
+
+  .navdecategorias li:nth-child(1){
+
+    margin-right: 0;
+    display: none;
+
+  }
+
+  .navdecategorias li:nth-child(3){
+
+    margin-right: 0;
+    display: none;
+
+  }
+
+  .navdecategorias li:nth-child(4){
+
+    margin-right: 0;
+    display: none;
+
+  }
+
+  .navdecategorias li:nth-child(5){
+
+    margin-right: 0;
+    display: none;
+
+  }
+
+  .populares, .combos{
+
+    flex-basis: 48%;
+
+  }
+
+  .ofertas{
+
+    flex-basis: 95%;
+
+  }
+
+  .ofertasespeciales img{
+
+      max-width: 200px;
+      max-height: 200px;
+
+  }
+
+}
+
+@media (min-width:480px) and (max-width:768px) {
+
+  .navdecategorias li:not(:first-child), .banneramd, .bannernvidia{
+
+    display: none;
+
+  }
+
+  .populares, .combos{
+
+    flex-basis: 48%;
+
+  }
+
+  .ofertas{
+
+    flex-basis: 95%;
+
+  }
+
+  h5{
+
+    font-size: 3em;
+
+  }
 
 }
