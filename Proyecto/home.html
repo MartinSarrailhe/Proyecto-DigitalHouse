@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="/css/styles.css">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css">
     <title></title>
   </head>
   <body>
     <header>
       <nav class="main-nav">
-        <h1 class="titulo">LOREM</h1>
-        <h5 class="little title">computacion</h5>
-        <ul>
-          <li class="categorias">COMPONENTES</li>
-          <li class="categorias">PERIFÉRICOS</li>
-          <li class="categorias">CONTACTO</li>
-          <li class="categorias">ARMÁ TU PC</li>
-          <li class="seachbox">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Encuentra tu producto">
-              <div class="input-group-append">
-                <button class="btn btn-secondary" type="button">
-                  <i class="fa fa-search"></i>
-                </button>
-              </div>
-            </div>
-          </li>
-          <li class="login">Ingresar</li>
-          <li class="login">Registrarse</li>
-          <li class="carrito">(carrito)</li>
-        </ul>
+        <div class="titulos">
+          <h1 class="titulo">LOREM</h1>
+          <h5 class="little title">soluciones informaticas</h5>
+        </div>
+        <div class="navs">
+          <ul class="navdecategorias">
+            <li class="categorias"><a href="#">COMPONENTES</a></li>
+            <li class="categorias"><a href="#">PERIFÉRICOS</a></li>
+            <li class="categorias"><a href="#">CONTACTO</a></li>
+            <li class="categorias"><a href="#">ARMÁ TU PC</a></li>
+          </ul>
+          <ul class="navderegister">
+            <li class="login"><a href="login.html">Ingresar</a></li>
+            <li class="login"><a href="registro.html">Registrarse</a></li>
+            <li class="carrito">(carrito)</li>
+            <li class="seachbox">
+					    <input class="flexsearch--input" type="search" placeholder="search">
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
-    <img src="images/widenvidia.jpg" alt="">
-    <section class="maspopulares">
+    <img class="bannernvidia" src="images/widenvidia.jpg" alt="">
+    <div class="barras">
       <h6 class="subtitulo">Mas Populares</h6>
+    </div>
+    <section class="maspopulares">
       <article class="populares">
         <img src="images/1650.jpg" alt="">
         <p>$ 16.399</p>
@@ -44,11 +46,6 @@
         <img src="images/2080ti.jpg" alt="">
         <p>$ 120.999</p>
         <p>ROG GEFORCE RTX 2080Ti 11GB</p>
-      </article>
-      <article class="populares">
-        <img src="images/i5-9600k.jpg" alt="">
-        <p>$ 20.899</p>
-        <p>Intel Core i5 9600k 4.7Ghz</p>
       </article>
       <article class="populares">
         <img src="images/i7-9700k.jpg" alt="">
@@ -61,8 +58,10 @@
         <p>AMD Ryzen 7 3700x 4.4Ghz</p>
       </article>
     </section>
-    <section class="combosrecomendados">
+    <div class="barras">
       <h6 class="subtitulo">Combos Recomendados</h6>
+    </div>
+    <section class="combosrecomendados">
       <article class="combos">
         <img src="images\comboi5.jpg" alt="">
         <p>Combo i5 9400F + Mother B360 + 8GB RAM</p>
