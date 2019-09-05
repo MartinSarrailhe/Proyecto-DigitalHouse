@@ -122,18 +122,32 @@ h6 {
 
 }
 
+.combosrecomendados {
+
+}
+
 .maspopulares, .combosrecomendados, .ofertasespeciales{
 
   width: 100%;
+  padding: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
 }
 
-.populares, .combos, .ofertas{
+.populares, .combos{
 
   flex-basis: 22%;
+  position: relative;
+  padding-bottom: 50px;
+
+}
+
+.ofertas{
+
+  flex-basis: 18%;
+  position: relative;
 
 }
 
@@ -151,6 +165,39 @@ h6 {
 .populares p, .combos p, .ofertas p {
 
   text-align: center;
+
+}
+
+.populares .precio, .combos .precio {
+
+  position:absolute;
+  background-color: darkgreen;
+  color: white;
+  padding: 7px;
+  border-radius: 1000px;
+  font-size: 1.5em;
+  font-weight: bolder;
+
+}
+
+.populares .precio{
+
+  bottom: 120px;
+  right: 0;
+
+}
+
+.combos .precio {
+
+  bottom: 140px;
+  right: 0;
+
+}
+
+.populares .modelo, .combos .modelo {
+
+  padding-top: 20px;
+  font-family: 'Anton', sans-serif;
 
 }
 
