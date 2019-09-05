@@ -1,17 +1,8 @@
-.completar {
-  overflow: hidden;
-  
-}
 
-.Registro{
-float: left;
-
-}
-#Nombre{
-  margin: 45px;
-}
-
-#boton {
-  float: left;
-  padding: 20px;
+.padre{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  justify-content: center;
+    align-items: center;
 }
