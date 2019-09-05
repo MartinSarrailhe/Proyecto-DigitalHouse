@@ -26,6 +26,21 @@ li {
   margin-right: 3%
 }
 
+header{
+
+  background-image: url("../images/background.jpg");
+
+}
+
+.logocontainer{
+
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  width: 100%
+}
+
 .seachbox {
 
   margin-right: 0;
@@ -38,13 +53,14 @@ li {
   display: flex;
   width: 100%;
   margin-bottom: 1%;
-  padding: 10px;
-  background-color: lightblue;
+  padding: 20px;
+
 
 }
 
 .navdecategorias, .navderegister{
   display: flex;
+
 }
 
 .navdecategorias{
@@ -58,18 +74,32 @@ li {
 
 }
 
-.titulos{
+.navdecategorias a {
 
-  background-image: url("../images/background.png");
+  padding-right: 10px;
+
+}
+
+
+.navs a{
+
   color: white;
 
 }
 
-h1 {
+.armatupc{
 
-  font-size: 3em;
-  margin-left: 40%;
-  margin-right: 40%;
+  color: #5df5a2;
+  font-weight: bold;
+
+}
+
+.logo{
+
+  border-radius:100000px;
+  padding: 20px;
+  max-width: 250px;
+  max-height: 250px;
 
 }
 
@@ -118,7 +148,7 @@ h6 {
   width: 30%;
   background-color: green;
   color: white;
-  border-bottom: 5px solid green;
+  border-bottom: solid green;
 
 }
 
@@ -197,6 +227,7 @@ h6 {
 .populares .modelo, .combos .modelo {
 
   padding-top: 20px;
+  font-size: calc(12px + (22 - 12) * ((100vw - 300px) / (1600 - 300)));
   font-family: 'Anton', sans-serif;
 
 }
