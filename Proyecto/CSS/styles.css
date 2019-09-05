@@ -354,7 +354,35 @@ footer img {
 
 /* login.html */
 
+.access {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 100px;
+}
 
+.Persona {
+  padding: 20px;
+}
+
+.encriptado {
+  padding: 20px;
+}
+
+#Usuario {
+  width: 100%;
+  padding: 3px;
+}
+
+#Contraseña {
+  width: 100%;
+  padding: 3px;
+}
+
+#recordar {
+  margin: 20px;
+  padding: 10px;
+}
 
 /* Registro.html */
 
