@@ -352,6 +352,61 @@ footer img {
 
 }
 
+/* login.html */
+
+
+
+/* Registro.html */
+
+.padre {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px;
+}
+
+.name {
+  padding: 10px;
+}
+.apell {
+  padding: 10px;
+}
+.mail {
+  padding: 10px;
+}
+.contra {
+  padding: 10px;
+}
+.repite {
+  padding: 10px;
+}
+
+#Nombre {
+  width: 100%;
+  padding: 3px;
+}
+#Apellido{
+  width: 100%;
+  padding: 3px;
+}
+#Email {
+  width: 100%;
+  padding: 3px;
+}
+#Contraseña {
+  width: 100%;
+  padding: 3px;
+}
+#Contraseña2 {
+  width: 100%;
+  padding: 3px;
+}
+
+#enviar {
+  margin: 10px;
+  padding: 10px;
+}
+
 @media (min-width:1050px) {
 
   .menu, .navdecategorias li:nth-child(2) {
