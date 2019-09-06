@@ -161,9 +161,6 @@ h6 {
 
 }
 
-.combosrecomendados {
-
-}
 
 .maspopulares, .combosrecomendados, .ofertasespeciales{
 
@@ -171,7 +168,7 @@ h6 {
   padding: 15px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 
 }
 
@@ -256,13 +253,14 @@ h6 {
   border-radius: 1000px;
   font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   font-weight: bolder;
+  text-align: center;
 
 }
 
 .modelo2{
 
   position: absolute;
-  top: 0;
+  top: 40px;
   right: 20%;
   left:20%;
   font-family: 'Anton', sans-serif;
@@ -325,7 +323,7 @@ footer li:last-child{
 
 footer div {
 
-  width: 30%
+  flex-basis: 29%;
 
 }
 
@@ -352,14 +350,23 @@ footer img {
 
 }
 
+.titulologin, .tituloregister{
+
+  padding-top: 18px;
+
+}
+
 /* login.html */
+
+
 
 .access {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 100px;
+  padding: 42px 100px 100px 100px;
 }
+
 
 .Persona {
   padding: 20px;
@@ -389,6 +396,12 @@ footer img {
   padding: 20px;
 }
 
+.notfullwidth{
+
+  width: 20px;
+
+}
+
 button.iniciosesion {
   background-color: darkgreen;
   color: white;
@@ -396,10 +409,6 @@ button.iniciosesion {
   border: solid 1px black;
   border-radius: 5px;
   margin: 20px;
-}
-
-.mismatch {
-  padding: 20px;
 }
 
 .norecuerdacontraseña {
@@ -414,51 +423,20 @@ button.iniciosesion {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 50px;
+  padding: 43px;
 }
 
-.name {
+form div {
+
   padding: 10px;
-}
-.apell {
-  padding: 10px;
-}
-.mail {
-  padding: 10px;
-}
-.username {
-  padding: 10px;
-}
-.contra {
-  padding: 10px;
-}
-.repite {
-  padding: 10px;
+
 }
 
-#Nombre {
+form div input {
+
   width: 100%;
   padding: 3px;
-}
-#Apellido{
-  width: 100%;
-  padding: 3px;
-}
-#Email {
-  width: 100%;
-  padding: 3px;
-}
-#username {
-  width: 100%;
-  padding: 3px;
-}
-#Contraseña {
-  width: 100%;
-  padding: 3px;
-}
-#Contraseña2 {
-  width: 100%;
-  padding: 3px;
+
 }
 
 #enviar {
@@ -523,13 +501,18 @@ button#enviar {
 
   .ofertas{
 
-    flex-basis: 95%;
+    flex-basis: 45%;
+
+  }
+
+  .ofertas:nth-child(odd){
+
+    padding-right: 40px;
 
   }
 
   .ofertasespeciales img{
 
-      max-width: 200px;
       max-height: 200px;
 
   }
@@ -544,21 +527,77 @@ button#enviar {
 
   }
 
+  .navderegister li{
+
+    padding: 2px;
+
+  }
+
+  .redesociales{
+
+    flex-direction: column;
+
+  }
+
   .populares, .combos{
 
     flex-basis: 48%;
 
   }
 
+  .populares:nth-child(odd),
+  .combos:nth-child(odd){
+
+    padding-right: 4px;
+
+  }
+
+  .populares:nth-child(even),
+  .combos:nth-child(even){
+
+    padding-left: 4px;
+
+  }
+
   .ofertas{
 
     flex-basis: 95%;
+    padding-bottom: 20px;
 
   }
+
+  .ofertas img{
+
+    max-width: 250px;
+    max-height: 250px;
+
+  }
+
+  .ofertas .modelo2{
+
+    top:11px;
+    font-size: 2em;
+
+  }
+
+
+
 
   h5{
 
     font-size: 3em;
+
+  }
+
+  footer div li{
+
+    font-size: 12px;
+
+  }
+
+  .redesociales li{
+
+    padding-bottom: 0;
 
   }
 
