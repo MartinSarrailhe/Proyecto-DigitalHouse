@@ -426,6 +426,9 @@ button.iniciosesion {
 .mail {
   padding: 10px;
 }
+.username {
+  padding: 10px;
+}
 .contra {
   padding: 10px;
 }
@@ -442,6 +445,10 @@ button.iniciosesion {
   padding: 3px;
 }
 #Email {
+  width: 100%;
+  padding: 3px;
+}
+#username {
   width: 100%;
   padding: 3px;
 }
