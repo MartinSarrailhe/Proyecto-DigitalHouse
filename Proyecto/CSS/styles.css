@@ -176,6 +176,7 @@ h6 {
 
   flex-basis: 22%;
   position: relative;
+  padding:30px;
   padding-bottom: 50px;
 
 }
@@ -186,6 +187,8 @@ h6 {
   position: relative;
 
 }
+
+
 
 .populares img, .combos img, .ofertas img{
 
