@@ -1,3 +1,27 @@
+<?php
+
+include "functions.php";
+
+$nombreOk = "";
+$apellidoOk = "";
+$emailOk = "";
+$userNameOk = "";
+
+if ($_POST) {
+  $errores = validarRegistro($_POST);
+
+  $nombreOk = $_POST['nombre'];
+  $apellidoOk = $_POST['Apellido'];
+  $emailOk = $_POST['Email'];
+  $userNameOk = $_POST['username'];
+
+}
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -11,7 +35,7 @@
     <header>
       <nav class="main-nav">
         <div class="logocontainer">
-          <a href="home.html">
+          <a href="home.php">
             <img class="logo" src="images/logoLugama.png" alt="">
           </a>
         </div>
@@ -25,8 +49,8 @@
             <li class="categorias"><a href="#"><span class="armatupc">ARMÁ TU PC</span></a></li>
           </ul>
           <ul class="navderegister">
-            <li class="login"><a href="login.html">Ingresar</a></li>
-            <li class="login"><a href="registro.html">Registrarse</a></li>
+            <li class="login"><a href="login.php">Ingresar</a></li>
+            <li class="login"><a href="registro.php">Registrarse</a></li>
             <li class="carrito"><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
             <li class="seachbox">
 					    <input class="flexsearch--input" type="search" placeholder="Buscar producto...">
@@ -39,42 +63,92 @@
       Registrarse
     </h1>
     <div class="padre">
-      <form class="Registro" action="" method="post">
+      <form class="Registro" action="" method="post" enctype="multipart/form-data">
         <div class="name">
           <label for="Nombre">
             Nombre
           </label>
-          <input id="Nombre" type="text" name="nombre" value="">
+          <?php if(!isset($errores['Nombre'])): ?>
+            <input id="Nombre" type="text" name="nombre" value="<?= $nombreOk ?>">
+          <?php else: ?>
+            <input id="Nombre" type="text" name="nombre" value="">
+          <?php endif ?>
+          <small id="emailHelp" class="completarDatos">
+            <?php if(isset($errores["nombre"])): ?>
+                <?= $errores["nombre"]  ?>
+              <?php endif?>
+          </small>
         </div>
         <div class="apell">
           <label for="Apellido">
             Apellido
           </label>
-          <input id="Apellido" type="text" name="Apellido" value="">
+          <?php if(!isset($errores['Apellido'])): ?>
+            <input id="Apellido" type="text" name="Apellido" value="<?= $apellidoOk ?>">
+          <?php else: ?>
+            <input id="Apellido" type="text" name="Apellido" value="">
+          <?php endif ?>
+          <small id="emailHelp" class="completarDatos">
+            <?php if(isset($errores["Apellido"])): ?>
+                <?= $errores["Apellido"]  ?>
+              <?php endif?>
+          </small>
         </div>
         <div class="mail">
           <label for="Email">
             Email
           </label>
-          <input id="Email" type="text" name="Email" value="">
+          <?php if(!isset($errores['Email'])): ?>
+            <input id="Email" type="text" name="Email" value="<?= $emailOk ?>">
+          <?php else: ?>
+            <input id="Email" type="text" name="Email" value="">
+          <?php endif ?>
+          <small id="emailHelp" class="completarDatos">
+            <?php if(isset($errores["Email"])): ?>
+                <?= $errores["Email"]  ?>
+              <?php endif?>
+          </small>
         </div>
         <div class="username">
           <label for="">
             Nombre de usuario
           </label>
-          <input id="username" type="text" name="username" value="">
+          <?php if(!isset($errores['username'])): ?>
+            <input id="username" type="text" name="username" value="<?= $userNameOk ?>">
+          <?php else: ?>
+            <input id="username" type="text" name="username" value="">
+          <?php endif ?>
+          <small id="emailHelp" class="completarDatos">
+            <?php if(isset($errores["username"])): ?>
+                <?= $errores["username"]  ?>
+              <?php endif?>
+          </small>
         </div>
         <div class="contra">
           <label for="Contraseña">
             Contraseña
           </label>
           <input id="Contraseña" type="password" name="Contraseña" value="">
+          <small id="emailHelp" class="completarDatos">
+            <?php if(isset($errores["Contraseña"])): ?>
+                <?= $errores["Contraseña"]  ?>
+              <?php endif?>
+          </small>
         </div>
         <div class="repite">
           <label for="Contraseña2">
             Confirmar contraseña
           </label>
-          <input id="Contraseña2" type="password" name="" value="">
+          <input id="Contraseña2" type="password" name="Contraseña2" value="">
+          <small id="emailHelp" class="completarDatos">
+            <?php if(isset($errores["Contraseña2"])): ?>
+                <?= $errores["Contraseña2"]  ?>
+              <?php endif?>
+          </small>
+        </div>
+        <div class="imagenDePerfil">
+          <label for="avatar">Imagen de perfil</label>
+          <input type="file" id="avatar" class="perfilImage">
         </div>
         <button id="enviar" type="submit" name="">Registrarse</button>
       </form>

@@ -429,6 +429,12 @@ button.iniciosesion {
   padding: 43px;
 }
 
+.completarDatos {
+  color: red;
+  font-weight: bold;
+}
+
+
 form div {
 
   padding: 10px;
