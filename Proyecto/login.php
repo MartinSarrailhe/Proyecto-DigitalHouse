@@ -1,3 +1,31 @@
+<?php
+
+include "functions.php";
+
+if(usuarioLogueado()){
+  header("Location:home.php");
+  exit;
+}
+
+$errores = [];
+
+if($_POST){
+  $errores = validarLogin($_POST);
+
+  if(!$errores){
+    loguearUsuario($_POST['Email']);
+
+
+    header("Location:home.php");
+    exit;
+  }
+}
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -5,13 +33,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto|Gayathri|Anton|Lexend+Giga|Work+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="CSS/styles.css">
-  <title>Registro - LUGAMA</title>
+  <title>Login - LUGAMA</title>
 </head>
   <body>
     <header>
       <nav class="main-nav">
         <div class="logocontainer">
-          <a href="home.html">
+          <a href="home.php">
             <img class="logo" src="images/logoLugama.png" alt="">
           </a>
         </div>
@@ -25,8 +53,8 @@
             <li class="categorias"><a href="#"><span class="armatupc">ARMÁ TU PC</span></a></li>
           </ul>
           <ul class="navderegister">
-            <li class="login"><a href="login.html">Ingresar</a></li>
-            <li class="login"><a href="registro.html">Registrarse</a></li>
+            <li class="login"><a href="login.php">Ingresar</a></li>
+            <li class="login"><a href="registro.php">Registrarse</a></li>
             <li class="carrito"><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
             <li class="seachbox">
 					    <input class="flexsearch--input" type="search" placeholder="Buscar producto...">
@@ -35,48 +63,36 @@
         </div>
       </nav>
     </header>
-    <h1 class="tituloregister">
-      Registrarse
+    <h1 class="titulologin">
+      Acceder a su cuenta
     </h1>
-    <div class="padre">
-      <form class="Registro" action="" method="post">
-        <div class="name">
-          <label for="Nombre">
-            Nombre
-          </label>
-          <input id="Nombre" type="text" name="nombre" value="">
+    <div class="access">
+      <form class="login" action="" method="post">
+        <div class="Persona">
+          <label for="Email">Email</label>
+          <input id="Email" type="email" name="Email" value="">
+          <small id="emailHelp" class="completarDatos">
+            <?php if(isset($errores["Email"])): ?>
+                <?= $errores["Email"]  ?>
+              <?php endif?>
+          </small>
         </div>
-        <div class="apell">
-          <label for="Apellido">
-            Apellido
-          </label>
-          <input id="Apellido" type="text" name="Apellido" value="">
-        </div>
-        <div class="mail">
-          <label for="Email">
-            Email
-          </label>
-          <input id="Email" type="text" name="Email" value="">
-        </div>
-        <div class="username">
-          <label for="">
-            Nombre de usuario
-          </label>
-          <input id="username" type="text" name="username" value="">
-        </div>
-        <div class="contra">
-          <label for="Contraseña">
-            Contraseña
-          </label>
+        <div class="encriptado">
+          <label for="Contraseña">Contraseña</label>
           <input id="Contraseña" type="password" name="Contraseña" value="">
+          <small id="emailHelp" class="completarDatos">
+            <?php if(isset($errores["login"])): ?>
+                <?= $errores["login"]  ?>
+              <?php endif?>
+          </small>
         </div>
-        <div class="repite">
-          <label for="Contraseña2">
-            Confirmar contraseña
-          </label>
-          <input id="Contraseña2" type="password" name="" value="">
+        <div class="checkboxrememberme">
+          <label for="rememberme">Recordarme</label>
+          <input class="notfullwidth" id="rememberme" type="checkbox" name="rememberme" value="">
         </div>
-        <button id="enviar" type="submit" name="">Registrarse</button>
+        <button class="iniciosesion" type="submit" name="button">Iniciar Sesión</button>
+        <br>
+        <a class="norecuerdacontraseña" href="#">¿No recuerda su contraseña?</a>
       </form>
     </div>
     <footer>
@@ -111,5 +127,4 @@
       </div>
     </footer>
   </body>
-
 </html>
