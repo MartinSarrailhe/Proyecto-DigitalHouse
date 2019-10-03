@@ -1,3 +1,24 @@
+<?php
+
+include "functions.php";
+
+if($_POST){
+  $errores = validarLogin($_POST);
+
+  if(!$errores){
+    loguearUsuario($_POST['Email']);
+
+
+    header("Location:home.php");
+    exit;
+  }
+}
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -41,12 +62,22 @@
     <div class="access">
       <form class="login" action="" method="post">
         <div class="Persona">
-          <label for="Usuario">Usuario</label>
-          <input id="Usuario" type="text" name="" value="">
+          <label for="Email">Email</label>
+          <input id="Email" type="email" name="Email" value="">
+          <small id="emailHelp" class="completarDatos">
+            <?php if(isset($errores["Email"])): ?>
+                <?= $errores["Email"]  ?>
+              <?php endif?>
+          </small>
         </div>
         <div class="encriptado">
           <label for="Contraseña">Contraseña</label>
-          <input id="Contraseña" type="password" name="" value="">
+          <input id="Contraseña" type="password" name="Contraseña" value="">
+          <small id="emailHelp" class="completarDatos">
+            <?php if(isset($errores["login"])): ?>
+                <?= $errores["login"]  ?>
+              <?php endif?>
+          </small>
         </div>
         <div class="checkboxrememberme">
           <label for="rememberme">Recordarme</label>

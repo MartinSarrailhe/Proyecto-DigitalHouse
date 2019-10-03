@@ -15,10 +15,17 @@ if ($_POST) {
   $emailOk = $_POST['Email'];
   $userNameOk = $_POST['username'];
 
+  if (!$errores) {
+    $usuario = armarUsuario();
+    guardarUsuario($usuario);
+    $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+    move_uploaded_file($_FILES["avatar"]["tmp_name"], "img/" . $usuario["id"] . "." . $ext);
+
+    header("Location:home.php");
+    exit;
+  }
+
 }
-
-
-
 
 ?>
 
@@ -101,7 +108,7 @@ if ($_POST) {
           <?php if(!isset($errores['Email'])): ?>
             <input id="Email" type="text" name="Email" value="<?= $emailOk ?>">
           <?php else: ?>
-            <input id="Email" type="text" name="Email" value="">
+            <input id="Email" type="email" name="Email" value="">
           <?php endif ?>
           <small id="emailHelp" class="completarDatos">
             <?php if(isset($errores["Email"])): ?>
@@ -148,7 +155,7 @@ if ($_POST) {
         </div>
         <div class="imagenDePerfil">
           <label for="avatar">Imagen de perfil</label>
-          <input type="file" id="avatar" class="perfilImage">
+          <input type="file" id="avatar" class="perfilImage" name="avatar">
         </div>
         <button id="enviar" type="submit" name="">Registrarse</button>
       </form>

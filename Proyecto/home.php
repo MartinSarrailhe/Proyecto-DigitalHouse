@@ -1,3 +1,15 @@
+<?php
+
+include "functions.php";
+
+if(usuarioLogueado()){
+  $usuario = buscarUsuarioPorMail($_SESSION['Email']);
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -25,8 +37,13 @@
             <li class="categorias"><a href="#"><span class="armatupc">ARMÁ TU PC</span></a></li>
           </ul>
           <ul class="navderegister">
-            <li class="login"><a href="login.php">Ingresar</a></li>
-            <li class="login"><a href="registro.php">Registrarse</a></li>
+            <?php if(usuarioLogueado()): ?>
+              <li class="login">Hola: <?= $usuario['username'] ?></li>
+              <li class="login"><a href="logout.php">Cerrar sesión</a></li>
+            <?php else: ?>
+              <li class="login"><a href="login.php">Ingresar</a></li>
+              <li class="login"><a href="registro.php">Registrarse</a></li>
+            <?php endif ?>
             <li class="carrito"><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
             <li class="seachbox">
 					    <input class="flexsearch--input" type="search" placeholder="Buscar producto...">
