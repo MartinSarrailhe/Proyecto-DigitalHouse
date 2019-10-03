@@ -7,6 +7,11 @@ $apellidoOk = "";
 $emailOk = "";
 $userNameOk = "";
 
+if(usuarioLogueado()){
+  header("Location:home.php");
+  exit;
+}
+
 if ($_POST) {
   $errores = validarRegistro($_POST);
 
@@ -20,7 +25,7 @@ if ($_POST) {
     guardarUsuario($usuario);
     $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
     move_uploaded_file($_FILES["avatar"]["tmp_name"], "img/" . $usuario["id"] . "." . $ext);
-
+    loguearUsuario($_POST['Email']);
     header("Location:home.php");
     exit;
   }
@@ -156,6 +161,10 @@ if ($_POST) {
         <div class="imagenDePerfil">
           <label for="avatar">Imagen de perfil</label>
           <input type="file" id="avatar" class="perfilImage" name="avatar">
+          <small id="emailHelp" class="completarDatos">
+          <?php if(isset($errores['avatar'])) :?>
+              <?= $errores['avatar'] ?>
+            <?php endif ?>
         </div>
         <button id="enviar" type="submit" name="">Registrarse</button>
       </form>

@@ -23,7 +23,8 @@ a {
 
 li {
 	list-style-type: none;
-  margin-right: 3%
+  margin-right: 3%;
+  color: white;
 }
 
 header{
@@ -58,6 +59,10 @@ header{
 
 }
 
+.top{
+  padding-left: 5px;
+}
+
 .navdecategorias, .navderegister{
   display: flex;
 
@@ -69,7 +74,7 @@ header{
 
 .navderegister {
 
-  width: 30%;
+  width: 61%;
   justify-content: flex-end;
   font-weight: bold;
 
@@ -81,11 +86,19 @@ header{
 
 }
 
+.categorias{
+  font-size: 16px
+}
 
 .navs a{
 
   color: white;
 
+}
+
+li .login{
+
+  color: white;
 }
 
 .armatupc{
@@ -502,6 +515,11 @@ button#enviar {
 
   }
 
+  .categorias{
+
+    padding-top: 10px;
+  }
+
   .populares, .combos{
 
     flex-basis: 48%;
@@ -548,6 +566,11 @@ button#enviar {
 
   }
 
+  .categorias{
+
+    padding-top: 10px;
+  }
+
   .populares, .combos{
 
     flex-basis: 48%;
@@ -589,7 +612,10 @@ button#enviar {
 
   }
 
+  .navs{
 
+    padding: 10px;
+  }
 
 
   h5{
@@ -608,6 +634,12 @@ button#enviar {
 
     padding-bottom: 0;
 
+  }
+
+  .fas{
+
+    padding-top: 10px;
+    padding-left: 10px;
   }
 
 }

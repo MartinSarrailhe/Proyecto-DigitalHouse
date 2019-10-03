@@ -28,6 +28,8 @@ function validarRegistro($datos){
     $errores["Email"] = "El campo es obligatorio";
   } else if( !filter_var($datosFinales["Email"], FILTER_VALIDATE_EMAIL) ){
     $errores["Email"] = "Por favor ingrese un email con formato válido.";
+  } else if(buscarUsuarioPorMail($datosFinales["Email"])){
+    $errores["Email"] = "El email ingresado ya fue registrado";
   }
 
 
@@ -47,11 +49,26 @@ function validarRegistro($datos){
     $errores["Contraseña2"] = "Las contraseñas no coinciden";
   }
 
+  if(strlen($_FILES['avatar']['name']) == 0){
+    $errores['avatar'] = "Por favor suba una imagen de perfil.";
+  } else {
+    $ext = pathinfo($_FILES["avatar"]['name'], PATHINFO_EXTENSION);
+
+    if($ext !== "jpg" && $ext !== "png" && $ext !== "jpeg"){
+      $errores['avatar'] = "El archivo debe ser una imagen de tipo .jpg, .jpeg, .png";
+    }
+
+  }
+
   return $errores;
 
 }
 
 function nextId(){
+
+ if(!file_exists("db.json")){
+   return 1;
+ }
  $json = file_get_contents("db.json");
  $array = json_decode($json, true);
  $lastUser = array_pop($array['usuarios']);
@@ -74,7 +91,13 @@ function armarUsuario(){
 }
 
 function guardarUsuario($user){
-  $json = file_get_contents("db.json");
+
+  if(file_exists("db.json")){
+    $json = file_get_contents("db.json");
+  } else{
+    $json = "";
+  }
+
   $array = json_decode($json, true);
   $array['usuarios'][] = $user;
   $json = json_encode($array,JSON_PRETTY_PRINT);
@@ -82,8 +105,13 @@ function guardarUsuario($user){
 }
 
 function buscarUsuarioPorMail($email){
-  $json = file_get_contents("db.json");
-  $array = json_decode($json, true);
+
+  if(!file_exists("db.json")){
+    $array['usuarios'] = [];
+  } else {
+    $json = file_get_contents("db.json");
+    $array = json_decode($json, true);
+  }
 
   foreach ($array['usuarios'] as $usuario) {
     if($usuario['Email'] === $email){
@@ -124,10 +152,14 @@ function validarLogin($datos){
 
 function loguearUsuario($email){
   $_SESSION['Email'] = $email;
+
+  if(isset($_POST["rememberme"])){
+    setcookie('email', $email, time()+60*60);
+  }
 }
 
 function usuarioLogueado(){
-  return isset($_SESSION['Email']);
+  return isset($_SESSION["Email"]);
 }
 
 

@@ -2,6 +2,13 @@
 
 include "functions.php";
 
+if(usuarioLogueado()){
+  header("Location:home.php");
+  exit;
+}
+
+$errores = [];
+
 if($_POST){
   $errores = validarLogin($_POST);
 

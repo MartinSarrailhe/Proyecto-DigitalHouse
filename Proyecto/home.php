@@ -2,6 +2,10 @@
 
 include "functions.php";
 
+if(isset($_COOKIE['email'])){
+  loguearUsuario($_COOKIE['email']);
+}
+
 if(usuarioLogueado()){
   $usuario = buscarUsuarioPorMail($_SESSION['Email']);
 }
