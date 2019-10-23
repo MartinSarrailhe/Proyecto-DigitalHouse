@@ -22,14 +22,16 @@ class DbJson extends Db
   }
 
   //Métodos
-  public function guardarUsuario(Usuario $user, string $file = null){
+  public function guardarUsuario(Usuario $usuario, string $file = null){
     $array = json_decode($this->json, true);
     //Pasar el usuario de Objeto a Array.
     $usuario = [
-      "id" => $user->getId(),
-      "name" => $user->getName(),
-      "email" => $user->getEmail(),
-      "password" =>$user->getPassword(),
+      "id" => $usuario->getId(),
+      "nombre" => $usuario->getName(),
+      "Apellido" => $usuario->getApellido(),
+      "Email" => $usuario->getEmail(),
+      "username" => $usuario->getUsername(),
+      "Contraseña" =>$usuario->getPassword(),
     ];
 
     $array["usuarios"][] = $usuario;
@@ -38,11 +40,11 @@ class DbJson extends Db
     file_put_contents($file, $json);
   }
 
-  public function buscarUsuarioPorMail(string $email){
+  public function buscarUsuarioPorMail(string $Email){
     $array = json_decode($this->json, true);
 
     foreach ($array["usuarios"] as $usuario) {
-      if($usuario["Email"] == $email){
+      if($usuario["Email"] == $Email){
         $user = new Usuario($usuario);
         // var_dump($user);
         // exit;

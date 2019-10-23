@@ -6,11 +6,11 @@ class Auth{
     session_start();
   }
 
-  public function loguearUsuario($email){
-    $_SESSION["Email"] = $email;
+  public function loguearUsuario($Email){
+    $_SESSION["Email"] = $Email;
 
     if(isset($_POST["rememberme"])){ //Seteamos cookie si el usuario tildó la casilla "Recordarme"
-      setcookie('Email', $email, time()+60*60);
+      setcookie('Email', $Email, time()+60*60);
     }
 
   }

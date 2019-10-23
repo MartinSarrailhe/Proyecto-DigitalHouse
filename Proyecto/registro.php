@@ -9,25 +9,23 @@ $userNameOk = "";
 
 if($auth->usuarioLogueado()){
   header("Location:home.php");
-  exit;
 }
 
 if ($_POST) {
   $errores = Validator::validarRegistro($_POST);
 
-  $nombreOk = trim($_POST['nombre'];)
-  $apellidoOk = trim($_POST['Apellido'];)
+  $nombreOk = trim($_POST['nombre']);
+  $apellidoOk = trim($_POST['Apellido']);
   $emailOk = trim($_POST['Email']);
   $userNameOk = trim($_POST['username']);
 
   if (!$errores) {
     $usuario = new Usuario($_POST)
     $db->guardarUsuario($usuario, $file);
-    $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+    $ext = pathinfo($_FILES["avatar"]["nombre"], PATHINFO_EXTENSION);
     move_uploaded_file($_FILES["avatar"]["tmp_name"], "img/" . $usuario["id"] . "." . $ext);
     $auth->loguearUsuario($_POST['Email']);
     header("Location:home.php");
-    exit;
   }
 
 }

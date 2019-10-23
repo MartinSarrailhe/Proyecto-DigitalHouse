@@ -9,9 +9,9 @@ class DbMysql extends db
 
   public function __construct()
   {
-    $dsn = "mysql:host=127.0.0.1;dbname=05armo;port=3306";
+    $dsn = "mysql:host=127.0.0.1;dbname=lugama2;port=3306";
     $user = "root";
-    $pass = "root"; //¿Cómo resolvemos que las contraseñas o usuarios sean diferentes.
+    $pass = ""; //¿Cómo resolvemos que las contraseñas o usuarios sean diferentes.
 
     try {
       $this->dbMysql = new PDO($dsn, $user, $pass); //Resuelve la conexión.
@@ -39,11 +39,11 @@ class DbMysql extends db
 
   }
 
-  public function buscarUsuarioPorMail(string $email){
+  public function buscarUsuarioPorMail(string $Email){
 
     $stmt = $this->dbMysql->prepare("SELECT * FROM usuarios WHERE Email = :Email");
 
-    $stmt->bindValue(":Email", $email);
+    $stmt->bindValue(":Email", $Email);
     $stmt->execute();
 
     $usuarioArray = $stmt->fetch(PDO::FETCH_ASSOC);

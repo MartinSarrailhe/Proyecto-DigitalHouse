@@ -13,5 +13,5 @@ $file = "db.json";
 //$db = new DbJson($file);
 $db = new DbMysql;
 
-// TODO: //refactorizar todas las llamadas a DB para que no rompa. Resuelto
-// TODO: refactorizar el constructor de usuario para que filtre el id.  Resuelto.
+// todo: //refactorizar todas las llamadas a DB para que no rompa. Resuelto
+// todo: refactorizar el constructor de usuario para que filtre el id.  Resuelto.

@@ -2,13 +2,13 @@
 
 include "init.php";
 
-if(isset($_COOKIE['email'])){
-  $auth->loguearUsuario($_COOKIE['email']);
+if(isset($_COOKIE['Email'])){
+  $auth->loguearUsuario($_COOKIE['Email']);
 }
 
 if($auth->usuarioLogueado()){
   $usuario = $db->buscarUsuarioPorMail($_SESSION['Email']);
-  $imagen = glob("avatar/".$_SESSION['email'].".*")[0];
+  $imagen = glob("avatar/".$_SESSION['Email'].".*")[0];
 } else {
   $usuario = "";
 }

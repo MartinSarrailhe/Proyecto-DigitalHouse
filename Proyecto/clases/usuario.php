@@ -21,7 +21,7 @@ class Usuario
 
     if(isset($array["id"])){
       $this->id = $array["id"];
-      $this->password = $array["Contraseña"];
+      $this->Contraseña = $array["Contraseña"];
     } else {
       //Este if resuelve si usamos json o mysql
       if ($db instanceof DbJson ){
@@ -29,12 +29,12 @@ class Usuario
       } else {
         $this->id = null;
       }
-      $this->password = password_hash($array["Contraseña"], PASSWORD_DEFAULT);
+      $this->Contraseña = password_hash($array["Contraseña"], PASSWORD_DEFAULT);
     }
-    $this->name = $array["nombre"];
+    $this->nombre = $array["nombre"];
     $this->Apellido = $array["Apellido"];
     $this->username = $array["username"];
-    $this->email = $array["Email"];
+    $this->Email = $array["Email"];
 
 
   }
@@ -56,7 +56,7 @@ class Usuario
     return $this->username;
   }
   public function getPassword(){
-    return $this->password;
+    return $this->Contraseña;
   }
 
 
