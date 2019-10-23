@@ -1,0 +1,20 @@
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "nombre": "Lucas",
+            "Apellido": "Saracco",
+            "Email": "lucasmsaracco@hotmail.com",
+            "username": "sm0ther",
+            "Contrase\u00f1a": "$2y$10$GMiXfG.e5fC2N0jCYK1HguDL99nCsTGPeCSUnEPXcqPDjH1IzB7KK"
+        },
+        {
+            "id": 2,
+            "nombre": "Lucas",
+            "Apellido": "Saracco",
+            "Email": "asdasd@fk.com",
+            "username": "sm0ther",
+            "Contrase\u00f1a": "$2y$10$sqUVqirOeUNQtAgUiprggOYa597NlymxpVNz5gM2Jn6LWUsZDPjzq"
+        }
+    ]
+}

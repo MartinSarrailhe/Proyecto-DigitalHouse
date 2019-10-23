@@ -1,13 +1,16 @@
 <?php
 
-include "functions.php";
+include "init.php";
 
 if(isset($_COOKIE['email'])){
-  loguearUsuario($_COOKIE['email']);
+  $auth->loguearUsuario($_COOKIE['email']);
 }
 
-if(usuarioLogueado()){
-  $usuario = buscarUsuarioPorMail($_SESSION['Email']);
+if($auth->usuarioLogueado()){
+  $usuario = $db->buscarUsuarioPorMail($_SESSION['Email']);
+  $imagen = glob("avatar/".$_SESSION['email'].".*")[0];
+} else {
+  $usuario = "";
 }
 
 
@@ -41,7 +44,7 @@ if(usuarioLogueado()){
             <li class="categorias"><a href="#"><span class="armatupc">ARMÁ TU PC</span></a></li>
           </ul>
           <ul class="navderegister">
-            <?php if(usuarioLogueado()): ?>
+            <?php if($auth->usuarioLogueado()): ?>
               <li class="login">Hola: <?= $usuario['username'] ?></li>
               <li class="login"><a href="logout.php">Cerrar sesión</a></li>
             <?php else: ?>

@@ -1,31 +1,31 @@
 <?php
 
-include "functions.php";
+include "init.php";
 
 $nombreOk = "";
 $apellidoOk = "";
 $emailOk = "";
 $userNameOk = "";
 
-if(usuarioLogueado()){
+if($auth->usuarioLogueado()){
   header("Location:home.php");
   exit;
 }
 
 if ($_POST) {
-  $errores = validarRegistro($_POST);
+  $errores = Validator::validarRegistro($_POST);
 
-  $nombreOk = $_POST['nombre'];
-  $apellidoOk = $_POST['Apellido'];
-  $emailOk = $_POST['Email'];
-  $userNameOk = $_POST['username'];
+  $nombreOk = trim($_POST['nombre'];)
+  $apellidoOk = trim($_POST['Apellido'];)
+  $emailOk = trim($_POST['Email']);
+  $userNameOk = trim($_POST['username']);
 
   if (!$errores) {
-    $usuario = armarUsuario();
-    guardarUsuario($usuario);
+    $usuario = new Usuario($_POST)
+    $db->guardarUsuario($usuario, $file);
     $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
     move_uploaded_file($_FILES["avatar"]["tmp_name"], "img/" . $usuario["id"] . "." . $ext);
-    loguearUsuario($_POST['Email']);
+    $auth->loguearUsuario($_POST['Email']);
     header("Location:home.php");
     exit;
   }
