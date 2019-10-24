@@ -26,24 +26,24 @@ class DbMysql extends db
 
   public function guardarUsuario(Usuario $user, string $file = null){
 
-    $stmt = $this->dbMysql->prepare("INSERT INTO usuarios VALUES(default, :nombre, :Apellido, :username, :Email, :Contraseña)");
+    $stmt = $this->dbMysql->prepare("INSERT INTO usuarios VALUES(default, :nombre, :Apellido, :username, :Email, :contrasenia, default, default)");
 
-    $stmt->bindValue(":nombre", $user->getNombre());
+    $stmt->bindValue(":nombre", $user->getName());
     $stmt->bindValue(":Apellido", $user->getApellido());
     $stmt->bindValue(":username", $user->getUsername());
     $stmt->bindValue(":Email", $user->getEmail());
-    $stmt->bindValue(":Contraseña", $user->getPassword());
+    $stmt->bindValue(":contrasenia", $user->getPassword());
 
     $stmt->execute();
 
 
   }
 
-  public function buscarUsuarioPorMail(string $Email){
+  public function buscarUsuarioPorMail(string $email){
 
     $stmt = $this->dbMysql->prepare("SELECT * FROM usuarios WHERE Email = :Email");
 
-    $stmt->bindValue(":Email", $Email);
+    $stmt->bindValue(":Email", $email);
     $stmt->execute();
 
     $usuarioArray = $stmt->fetch(PDO::FETCH_ASSOC);
