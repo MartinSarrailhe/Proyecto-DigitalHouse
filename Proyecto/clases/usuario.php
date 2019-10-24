@@ -21,11 +21,11 @@ class Usuario
 
     if(isset($array["id"])){
       $this->id = $array["id"];
-      $this->Contraseña = $array["Contraseña"];
+      $this->Contraseña = $array["contrasenia"];
     } else {
       //Este if resuelve si usamos json o mysql
-      if ($db instanceof DbJson ){
-        $this->id = $json->nextId(); //nextID();
+      if ($db instanceof DbJson){
+        $this->id = $db->nextId(); //nextID();
       } else {
         $this->id = null;
       }
