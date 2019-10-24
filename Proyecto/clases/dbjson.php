@@ -55,9 +55,14 @@ class DbJson extends Db
   }
 
   public function nextId(){
+
+    if(!file_exists("db.json")){
+      return 1;
+    }
+
     $array = json_decode($this->json, true);
 
-    $lastUser = array_pop($array["usuarios"]);
+    $lastUser = array_pop($array['usuarios']);
 
     $nextId = $lastUser["id"] + 1;
 

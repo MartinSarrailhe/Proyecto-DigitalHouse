@@ -24,8 +24,8 @@ class Usuario
       $this->Contraseña = $array["Contraseña"];
     } else {
       //Este if resuelve si usamos json o mysql
-      if ($db instanceof DbJson ){
-        $this->id = $json->nextId(); //nextID();
+      if ($db instanceof DbJson){
+        $this->id = $db->nextId(); //nextID();
       } else {
         $this->id = null;
       }

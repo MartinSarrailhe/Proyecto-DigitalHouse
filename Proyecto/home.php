@@ -8,7 +8,7 @@ if(isset($_COOKIE['Email'])){
 
 if($auth->usuarioLogueado()){
   $usuario = $db->buscarUsuarioPorMail($_SESSION['Email']);
-  $imagen = glob("avatar/".$_SESSION['Email'].".*")[0];
+  $imagen = glob("img/".$_SESSION['Email'].".*");
 } else {
   $usuario = "";
 }
@@ -45,7 +45,7 @@ if($auth->usuarioLogueado()){
           </ul>
           <ul class="navderegister">
             <?php if($auth->usuarioLogueado()): ?>
-              <li class="login">Hola: <?= $usuario['username'] ?></li>
+              <li class="login">Hola: <?= $usuario->getUsername() ?></li>
               <li class="login"><a href="logout.php">Cerrar sesión</a></li>
             <?php else: ?>
               <li class="login"><a href="login.php">Ingresar</a></li>

@@ -20,10 +20,10 @@ if ($_POST) {
   $userNameOk = trim($_POST['username']);
 
   if (!$errores) {
-    $usuario = new Usuario($_POST)
+    $usuario = new Usuario($_POST);
     $db->guardarUsuario($usuario, $file);
     $ext = pathinfo($_FILES["avatar"]["nombre"], PATHINFO_EXTENSION);
-    move_uploaded_file($_FILES["avatar"]["tmp_name"], "img/" . $usuario["id"] . "." . $ext);
+    move_uploaded_file($_FILES["avatar"]["tmp_name"], "img/" . $_POST["Email"] . "." . $ext);
     $auth->loguearUsuario($_POST['Email']);
     header("Location:home.php");
   }
