@@ -1,0 +1,52 @@
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "nombre": "Lucas",
+            "Apellido": "Saracco",
+            "Email": "lucasmsaracco@hotmail.com",
+            "username": "sm0ther",
+            "Contrase\u00f1a": "$2y$10$GMiXfG.e5fC2N0jCYK1HguDL99nCsTGPeCSUnEPXcqPDjH1IzB7KK"
+        },
+        {
+            "id": 2,
+            "nombre": "Lucas",
+            "Apellido": "Saracco",
+            "Email": "asdasd@fk.com",
+            "username": "sm0ther",
+            "Contrase\u00f1a": "$2y$10$sqUVqirOeUNQtAgUiprggOYa597NlymxpVNz5gM2Jn6LWUsZDPjzq"
+        },
+        {
+            "id": 3,
+            "nombre": "Gabriela",
+            "Apellido": "Saracco",
+            "Email": "gabriela@dh.com",
+            "username": "gabrieladh",
+            "Contrase\u00f1a": "$2y$10$2OayJ8jQFt3YGfWbUuKixe48MSPtickGx0bIpNx0FGBGoVwqSz\/jy"
+        },
+        {
+            "id": 4,
+            "nombre": "Gabriela",
+            "Apellido": "asdasfas",
+            "Email": "gabriela@dha.com",
+            "username": "gabrieladha",
+            "Contrase\u00f1a": "$2y$10$StO35b5zn1.96f7MgZ1WjOAj9zKRfJU\/GDg90ioEbBGvnQKfGs2PO"
+        },
+        {
+            "id": 5,
+            "nombre": "Gabriela",
+            "Apellido": "asdasfassdf",
+            "Email": "asdasd@afk.com",
+            "username": "gabrieladhaa",
+            "Contrase\u00f1a": "$2y$10$W8kXzXc7BobtsKji4ENWM.RoabyD4HXDmxX6JU6hwer0Jk6gY96xu"
+        },
+        {
+            "id": 6,
+            "nombre": "Jorge",
+            "Apellido": "Alameda",
+            "Email": "jorge@dh.com",
+            "username": "jorgedh",
+            "Contrase\u00f1a": "$2y$10$LpjRTU5PZoPWIZgp21iltOraRirLupcEQKcUz3wXc.eCpsqJS\/XF6"
+        }
+    ]
+}

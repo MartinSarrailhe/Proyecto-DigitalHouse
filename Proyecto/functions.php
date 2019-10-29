@@ -2,7 +2,7 @@
 
 session_start();
 
-//Registro.php
+Registro.php
 
 function validarRegistro($datos){
   $errores = [];
