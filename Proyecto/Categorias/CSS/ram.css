@@ -67,6 +67,12 @@ header{
   display: flex;
 
 }
+article img{
+  width: 800px;
+  height: 500px;
+  overflow:hidden;
+
+}
 
 .navdecategorias{
   width: 70%;
@@ -137,6 +143,12 @@ h5 {
 }
 
 
+.bannernvidia {
+
+  width: 100%;
+
+}
+
 
 hr {
 
@@ -165,8 +177,137 @@ h6 {
   border-bottom: solid green;
   word-spacing: 10px;
   letter-spacing: 6px;
+
 }
 
+
+.maspopulares, .combosrecomendados, .ofertasespeciales{
+
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.populares, .combos{
+
+  flex-basis: 22%;
+  position: relative;
+  padding:30px;
+  padding-bottom: 50px;
+
+}
+
+.ofertas{
+
+  flex-basis: 18%;
+  position: relative;
+
+}
+
+
+
+.populares img, .combos img, .ofertas img{
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border-radius: 1000px;
+  border: 4px solid lightgreen;
+
+}
+
+.populares p, .combos p, .ofertas p {
+
+  text-align: center;
+
+}
+
+.populares .precio, .combos .precio {
+
+  position:absolute;
+  background-color: darkgreen;
+  color: white;
+  padding: 7px;
+  border-radius: 1000px;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: bolder;
+
+}
+
+.populares .precio{
+
+  bottom: 120px;
+  right: 0;
+
+}
+
+.combos .precio {
+
+  bottom: 140px;
+  right: 0;
+
+}
+
+.populares .modelo, .combos .modelo {
+
+  padding-top: 20px;
+  font-size: calc(12px + (22 - 12) * ((100vw - 300px) / (1600 - 300)));
+  font-family: 'Anton', sans-serif;
+
+}
+
+.ofertas {
+
+  padding-top: 80px;
+  position: relative;
+
+}
+
+.precio2{
+
+  background-color: darkgreen;
+  color: white;
+  padding: 7px;
+  border-radius: 1000px;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: bolder;
+  text-align: center;
+
+}
+
+.modelo2{
+
+  position: absolute;
+  top: 40px;
+  right: 20%;
+  left:20%;
+  font-family: 'Anton', sans-serif;
+  font-size: calc(12px + (22 - 12) * ((100vw - 300px) / (1600 - 300)));
+
+}
+
+.negado{
+
+  text-decoration: line-through;
+
+}
+
+.descuento{
+
+  font-family: 'Lexend Giga', sans-serif;
+
+}
+
+.banneramd {
+
+  margin-top: 40px;
+  width: 100%;
+
+}
 
 footer {
 
@@ -236,6 +377,109 @@ footer img {
   padding-top: 18px;
 
 }
+
+/* login.html */
+
+
+
+.access {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 42px 100px 100px 100px;
+}
+
+
+.Persona {
+  padding: 20px;
+}
+
+.encriptado {
+  padding: 20px;
+}
+
+#Usuario {
+  width: 100%;
+  padding: 3px;
+}
+
+#Contraseña {
+  width: 100%;
+  padding: 3px;
+}
+
+#recordar {
+  margin: 20px;
+  padding: 10px;
+}
+
+.checkboxrememberme {
+  text-align: end;
+  padding: 20px;
+}
+
+.notfullwidth{
+
+  width: 20px;
+
+}
+
+button.iniciosesion {
+  background-color: darkgreen;
+  color: white;
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.norecuerdacontraseña {
+  text-decoration: underline;
+  color: blue;
+  padding: 20px;
+}
+
+/* Registro.html */
+
+.padre {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 43px;
+}
+
+.completarDatos {
+  color: red;
+  font-weight: bold;
+}
+
+
+form div {
+
+  padding: 10px;
+
+}
+
+form div input {
+
+  width: 100%;
+  padding: 3px;
+
+}
+
+#enviar {
+  margin: 10px;
+  padding: 10px;
+}
+
+button#enviar {
+  background-color: darkgreen;
+  color: white;
+  padding: 5 25px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+
 @media (min-width:1050px) {
 
   .menu, .navdecategorias li:nth-child(2) {
@@ -256,9 +500,152 @@ footer img {
 
   }
 
+  .navdecategorias li:nth-child(3){
+
+    margin-right: 0;
+    display: none;
+
+  }
+
+  .navdecategorias li:nth-child(4){
+
+    margin-right: 0;
+    display: none;
+
+  }
+
+  .navdecategorias li:nth-child(5){
+
+    margin-right: 0;
+    display: none;
+
+  }
+
+  .categorias{
+
+    padding-top: 10px;
+  }
+
+  .populares, .combos{
+
+    flex-basis: 48%;
+
+  }
+
+  .ofertas{
+
+    flex-basis: 45%;
+
+  }
+
+  .ofertas:nth-child(odd){
+
+    padding-right: 40px;
+
+  }
+
+  .ofertasespeciales img{
+
+      max-height: 200px;
+
+  }
+
+}
 
 @media (min-width:480px) and (max-width:768px) {
 
   .navdecategorias li:not(:first-child), .banneramd, .bannernvidia{
 
     display: none;
+
+  }
+
+  .navderegister li{
+
+    padding: 2px;
+
+  }
+
+  .redesociales{
+
+    flex-direction: column;
+
+  }
+
+  .categorias{
+
+    padding-top: 10px;
+  }
+
+  .populares, .combos{
+
+    flex-basis: 48%;
+
+  }
+
+  .populares:nth-child(odd),
+  .combos:nth-child(odd){
+
+    padding-right: 4px;
+
+  }
+
+  .populares:nth-child(even),
+  .combos:nth-child(even){
+
+    padding-left: 4px;
+
+  }
+
+  .ofertas{
+
+    flex-basis: 95%;
+    padding-bottom: 20px;
+
+  }
+
+  .ofertas img{
+
+    max-width: 250px;
+    max-height: 250px;
+
+  }
+
+  .ofertas .modelo2{
+
+    top:11px;
+    font-size: 2em;
+
+  }
+
+  .navs{
+
+    padding: 10px;
+  }
+
+
+  h5{
+
+    font-size: 3em;
+
+  }
+
+  footer div li{
+
+    font-size: 12px;
+
+  }
+
+  .redesociales li{
+
+    padding-bottom: 0;
+
+  }
+
+  .fas{
+
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+}
