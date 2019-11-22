@@ -174,7 +174,7 @@ if($auth->usuarioLogueado()){
         <ul>
           <li class="top">Seguinos en nuestras redes!</li>
           <div class="redesociales">
-            <li><a href="#"> <img src="images/facebook.png" alt=""> </a></li>
+            <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
             <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
             <li><a href="#"><img src="images/instagram.png" alt=""></a></li>
             <li><a href="#"><img src="images/linkedin.png" alt=""></a></li>

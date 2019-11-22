@@ -10,7 +10,8 @@ $auth = new Auth;
 // var_dump($auth);
 
 $file = "db.json";
-$db = new DbJson($file);
+//$db = new DbJson($file);
+$db = new DbJson;
 
 
 // todo: //refactorizar todas las llamadas a DB para que no rompa. Resuelto

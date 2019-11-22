@@ -43,7 +43,7 @@ class DbMysql extends db
 
     $stmt = $this->dbMysql->prepare("SELECT * FROM usuarios WHERE Email = :Email");
 
-    $stmt->bindValue(":Email", $email);
+    $stmt->bindValue(":Email", $Email);
     $stmt->execute();
 
     $usuarioArray = $stmt->fetch(PDO::FETCH_ASSOC);

@@ -3,7 +3,7 @@
 /**
  *
  */
-class DbMysql extends db
+class DbMysql extends Db
 {
   private $dbMysql;
 
