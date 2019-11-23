@@ -1,0 +1,217 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Rajdhani&display=swap');
+
+/* Variables */
+@import 'variables';
+
+/* Bootstrap */
+@import '~bootstrap/scss/bootstrap';
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rajdhani", sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+header {
+  /* background: url('/img/banners/abstract-technology-banner-template-vector.jpg'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  height: 15vh;
+}
+
+.logoContainer a{
+  text-decoration: none;
+  color: white;
+  font-size: 10vh;
+}
+
+.menu {
+  display: none;
+}
+
+.menu div {
+  width: 25px;
+  height: 5px;
+  margin: 2px;
+  background-color: black;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #26901C;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  margin-bottom: 0;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+}
+
+.login-register{
+  display: flex;
+  width: 65%;
+  justify-content: flex-end;
+}
+
+.login-register a{
+  margin-left: 20px;
+  color: black;
+  font-weight: bold;
+  padding-right: 2px;
+}
+
+div.seach-box{
+  display: flex;
+  justify-content: center;
+}
+
+input.search-input{
+  width: 80%;
+  border-radius: 10px;
+  padding-left: 15px;
+  background-color: gainsboro;
+  height: 5vh;
+}
+
+button {
+  width: 15%;
+  margin-left: 2px;
+  border-radius: 5px;
+}
+
+.banner-nvidia{
+  height: auto;
+  width: 100%;
+}
+
+div.popular-products{
+  margin-top: 3vh;
+}
+
+h3.popular-products{
+  text-transform: uppercase;
+  background-color: gainsboro;
+}
+
+section.populars-section{
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+article.products{
+  width: 40%;
+  float: left;
+  display: grid;
+  background-color: white;
+  margin: 5%;
+}
+
+article.products:hover{
+  border: solid 1px #9EA49D;
+}
+
+img.product-image{
+  height: auto;
+  max-width: 80%;
+}
+
+a.name-product{
+  text-decoration: none;
+}
+
+span.product-name{
+  font-size: 17px;
+  color: black;
+}
+
+div.product-price{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+button.more-products-button {
+  width: 33%;
+  margin: 40px;
+  border-color: #26901C;
+  text-transform: uppercase;
+}
+
+footer {
+  background-color: #565656;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4) inset;
+  color: #f0f0f0;
+}
+
+ul.social-network{
+  list-style: none;
+}
+
+li.top {
+  font-weight: bold;
+  font-size: 15px;
+  border-bottom: solid 1px #26901C;
+}
+
+a.general-info {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+div.redesociales{
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links{
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .menu {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 2560px){
+  article.products {
+    width: 21%;
+    float: left;
+    display: grid;
+    background-color: white;
+    margin: 2%;
+  }
+}

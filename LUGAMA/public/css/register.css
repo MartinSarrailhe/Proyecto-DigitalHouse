@@ -1,0 +1,24 @@
+body {
+  font-family: "Rajdhani", sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+.logoContainer a{
+  text-decoration: none;
+  color: white;
+  font-size: 10vh;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+}
+.login-register a{
+  margin-left: 20px;
+  color: black;
+  font-weight: bold;
+  padding-right: 2px;
+}
