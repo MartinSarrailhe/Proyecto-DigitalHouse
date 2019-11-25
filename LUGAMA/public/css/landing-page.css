@@ -96,6 +96,11 @@ div.space{
   padding-right: 2px;
 }
 
+div.nav-container a i {
+  margin-right: 3vw;
+  color: black;
+}
+
 div.seach-box{
   display: flex;
   justify-content: center;

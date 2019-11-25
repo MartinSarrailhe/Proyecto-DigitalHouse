@@ -37,6 +37,9 @@
                 @endauth
             </div>
         @endif
+        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+
+
   </div> <!-- Fin del top-nav -->
 
   <script src="{{ asset('js/header.js')}}"></script>
