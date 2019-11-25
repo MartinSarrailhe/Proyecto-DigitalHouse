@@ -21,8 +21,14 @@ body {
 
 header {
   /* background: url('/img/banners/abstract-technology-banner-template-vector.jpg'); */
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  position: fixed;
+  width: 100%;
+}
+
+div.space{
+  height: 24vh;
 }
 
 .logoContainer {
@@ -38,24 +44,26 @@ header {
   font-size: 10vh;
 }
 
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #26901C;
+}
+
 .menu {
   display: none;
 }
 
-.menu div {
+.menu div{
   width: 25px;
   height: 5px;
   margin: 2px;
   background-color: black;
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 8vh;
-  background-color: #26901C;
-}
+
 
 .nav-links {
   display: flex;
@@ -122,16 +130,17 @@ h3.popular-products{
 }
 
 section.populars-section{
-  box-sizing: border-box;
-  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 article.products{
   width: 40%;
-  float: left;
-  display: grid;
+  display: flex;
   background-color: white;
   margin: 5%;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 article.products:hover{
@@ -199,12 +208,33 @@ div.redesociales{
 @media screen and (max-width: 768px){
   .menu {
     display: block;
+    cursor: pointer;
   }
 
   .nav-links {
     display: none;
+    position: absolute;
+    left: 0px;
+    top: 23vh;
+    height: 77vh;
+    background-color: #26901C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-out;
   }
+  /* ul.nav-links li a:focus{
+    background-color: black;
+  } */
 }
+
+.nav-active{
+  transform: translateX(0%);
+}
+
+
 
 @media screen and (min-width: 768px) and (max-width: 2560px){
   article.products {
