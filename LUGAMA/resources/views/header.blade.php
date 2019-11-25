@@ -28,7 +28,12 @@
             <div class="login-register">
                 @auth
                     <a href="{{ url('/home') }}">Bienvenido: {{ Auth::user()->name }}</a>
-                    <a href="{{ route('logout') }}">Cerrar sesión</a>
+                    <a href="{{ route('logout') }}"
+                                              onclick="event.preventDefault();
+                                              document.getElementById('logout-form').submit();">Cerrar sesión</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          {{ csrf_field() }}
+                    </form>
                 @else
                     <a href="{{ route('login') }}">Ingresar</a>
 
