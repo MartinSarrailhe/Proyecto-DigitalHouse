@@ -18,6 +18,14 @@
 
     <body>
       @include('header')
+      <div class="seach-box">
+             <input class="search-input" type="search" placeholder="Buscar...">
+             <button>Buscar</button>
+      </div>
+
+      <div class="product">
+
+      </div>
 
       @include('footer')
     </body>
