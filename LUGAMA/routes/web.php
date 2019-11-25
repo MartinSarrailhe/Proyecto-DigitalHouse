@@ -24,3 +24,4 @@ Route::get('/products' , function() {
 });
 
 Route::get('/', 'LandingPageController@index')->name('landing-page');
+Route::get('/cart', 'CartController@index')->name('cart.index');

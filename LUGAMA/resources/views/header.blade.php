@@ -27,7 +27,8 @@
         @if (Route::has('login'))
             <div class="login-register">
                 @auth
-                    <a href="{{ url('/home') }}">Inicio</a>
+                    <a href="{{ url('/home') }}">Bienvenido: {{ Auth::user()->name }}</a>
+                    <a href="{{ route('logout') }}">Cerrar sesión</a>
                 @else
                     <a href="{{ route('login') }}">Ingresar</a>
 
