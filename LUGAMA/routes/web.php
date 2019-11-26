@@ -19,9 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/products' , function() {
-    return view('products');
-});
+// Route::get('/products' , function() {
+//     return view('products');
+// });
 
 Route::get('/', 'LandingPageController@index')->name('landing-page');
+Route::get('/products', 'ProductController@index')->name('products');
+Route::get('/product/{id}', 'ProductController@show')->name('product');
 Route::get('/cart', 'CartController@index')->name('cart.index');

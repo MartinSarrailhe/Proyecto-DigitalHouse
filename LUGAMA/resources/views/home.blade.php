@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>HOME - LUGAMA</title>
+    <title>Inicio - LUGAMA</title>
 
     <!--Fuente-->
     <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{{ asset('css/home.css')}}">
 </head>
 
-@section('content')
+{{-- @section('content') --}}
 
 @include('header')
 {{-- <div class="container">
@@ -67,4 +67,4 @@
 </div>
 
 @include('footer')
-@endsection
+{{-- @endsection --}}

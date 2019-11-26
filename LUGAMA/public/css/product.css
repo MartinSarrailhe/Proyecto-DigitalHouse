@@ -1,0 +1,18 @@
+div.conteiner{
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  margin-bottom: 20vh;
+}
+
+img.product-img{
+  border: 1px solid grey;
+}
+
+h1.product-name{
+  font-weight: bold;
+}
+h2.product-price{
+  font-weight: bold;
+  font-size: 10vh;
+}

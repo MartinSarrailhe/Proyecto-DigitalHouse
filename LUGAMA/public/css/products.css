@@ -1,0 +1,32 @@
+.products-container{
+  display: flex;
+}
+.categories{
+  margin-left: 3vw;
+  padding-top: 5vh;
+  display: flex;
+}
+ul {
+  list-style: none;
+}
+li.categories-title{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+a.categorie-link{
+  color: black;
+  font-size: 16px;
+}
+
+div.products{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article.products{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}

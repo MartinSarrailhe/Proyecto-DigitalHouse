@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>HOME - LUGAMA</title>
+        <title>{{$product->name}} - LUGAMA</title>
 
         <!--Fuente-->
         <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="{{ asset('css/app.css')}}">
         <link rel="stylesheet" href="{{ asset('css/landing-page.css')}}">
         <link rel="stylesheet" href="{{ asset('css/register.css')}}">
+        <link rel="stylesheet" href="{{ asset('/css/product.css')}}">
 
     </head>
 
@@ -23,8 +24,14 @@
              <button>Buscar</button>
       </div>
 
-      <div class="product">
-
+      <div class="conteiner">
+        <div class=""> <img class="product-img" src="/img/{{ $product->featured_img }}" alt=""> </div>
+        <div class="product-info">
+          <h1 class="product-name">{{ $product->name }}</h1>
+          <h2 class="product-price">${{ $product->price }}</h2>
+          <p class="product-detail">{{ $product->description }}</p>
+          <button type="submit" name="button">Agregar al carrito</button>
+        </div>
       </div>
 
       @include('footer')
