@@ -1,7 +1,7 @@
 <header class="header">
   <div class="logoContainer">
     <a href="#">
-      {{-- <img class="logo"  src="img/logo/logoLugama.png" alt=""> --}}
+      <img class="logo"  src="{{ asset('img/logo.png')}}" alt="">
       LUGAMA
     </a>
   </div> <!-- Fin del div del logo -->

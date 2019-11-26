@@ -22,3 +22,7 @@ body {
   font-weight: bold;
   padding-right: 2px;
 }
+
+div.container {
+  width: 60%;
+}

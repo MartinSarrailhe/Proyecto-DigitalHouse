@@ -36,6 +36,12 @@ div.space{
   justify-content: center;
   background-color: black;
   height: 15vh;
+  align-items: center;
+}
+
+img.logo {
+  height: 11vh;
+  width: auto;
 }
 
 .logoContainer a{
