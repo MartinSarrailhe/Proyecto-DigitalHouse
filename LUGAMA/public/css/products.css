@@ -30,3 +30,7 @@ article.products{
   justify-content: space-around;
   text-align: center;
 }
+
+span.product-name{
+  font-size: 16px;
+}

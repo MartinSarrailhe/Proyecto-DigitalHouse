@@ -24,6 +24,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 // });
 
 Route::get('/', 'LandingPageController@index')->name('landing-page');
+
 Route::get('/products', 'ProductController@index')->name('products');
 Route::get('/product/{id}', 'ProductController@show')->name('product');
+Route::get('/products/{product}', 'ProductController@show')->name('product.show');
+
 Route::get('/cart', 'CartController@index')->name('cart.index');

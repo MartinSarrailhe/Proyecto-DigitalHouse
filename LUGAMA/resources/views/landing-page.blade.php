@@ -34,8 +34,8 @@
                 <section class="populars-section">
                       @forelse ($products as $product)
                         <article class="products">
-                          <a class="product-img" href="#"> <img class="product-image" src="/img/{{ $product->featured_img }}" alt=""> </a>
-                          <a class="name-product" href="#"> <span class="product-name">{{ $product->name }}</span> </a>
+                          <a class="product-img" href="{{route('product.show', $product->id)}}"> <img class="product-image" src="/img/{{ $product->featured_img }}" alt=""> </a>
+                          <a class="name-product" href="{{route('product.show', $product->id)}}"> <span class="product-name">{{ $product->name }}</span> </a>
                           <div class="product-price">${{ $product->price }}</div>
                         </article>
                       @empty
