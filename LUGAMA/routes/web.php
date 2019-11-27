@@ -29,4 +29,5 @@ Route::get('/products', 'ProductController@index')->name('products');
 Route::get('/product/{id}', 'ProductController@show')->name('product');
 Route::get('/products/{product}', 'ProductController@show')->name('product.show');
 
-Route::get('/cart', 'CartController@index')->name('cart.index');
+Route::get('/cart', 'CartController@index')->middleware('auth');
+// Route::post('/addtocart', 'CartController@store');

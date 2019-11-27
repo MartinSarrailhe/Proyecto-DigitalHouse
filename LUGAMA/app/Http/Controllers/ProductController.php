@@ -52,6 +52,15 @@ class ProductController extends Controller
         return view('product')->with('product', $product);
     }
 
+
+    //POSIBLE RUTA FUTURA PARA EL CARRITO
+    // public function show(Product $product)
+    // {
+    //     $productDetail = Product::find($product->id);
+    //
+    //     return view('product', compact($product));
+    // }
+
     /**
      * Show the form for editing the specified resource.
      *

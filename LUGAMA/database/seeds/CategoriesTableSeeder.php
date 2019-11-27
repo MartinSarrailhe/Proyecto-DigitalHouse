@@ -16,6 +16,7 @@ class CategoriesTableSeeder extends Seeder
           ['name' => 'Auriculares'],
           ['name' => 'Gabinetes'],
           ['name' => 'Memorias RAM'],
+          ['name' => 'Monitores'],
           ['name' => 'Motherboards'],
           ['name' => 'Mouses'],
           ['name' => 'Placas de video'],

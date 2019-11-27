@@ -1,7 +1,7 @@
 <header class="header">
   <div class="logoContainer">
-    <a href="#">
-      <img class="logo"  src="{{ asset('img/logo.png')}}" alt="">
+    <a class="logo-logo" href="{{url('/')}}"><img class="logo"  src="{{ asset('img/logo.png')}}" alt=""></a>
+    <a class="logo-letras" href="{{url('/')}}">
       LUGAMA
     </a>
   </div> <!-- Fin del div del logo -->
@@ -17,8 +17,8 @@
           </div>
 
           <ul class="nav-links">
-            <li> <a href="#">Inicio</a> </li>
-            <li> <a href="#">Productos</a> </li>
+            <li> <a href="{{url('/')}}">Inicio</a> </li>
+            <li> <a href="{{url('/products')}}">Productos</a> </li>
             <li> <a href="#">ARMA TU PC</a> </li>
           </ul>
 
@@ -43,7 +43,7 @@
                 @endauth
             </div>
         @endif
-        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        <a href="{{url('/cart')}}"><i class="fas fa-shopping-cart"></i></a>
 
 
   </div> <!-- Fin del top-nav -->

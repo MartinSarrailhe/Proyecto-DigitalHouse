@@ -32,6 +32,7 @@
             <li> <a class="categorie-link" href="#">Auriculares</a> </li>
             <li> <a class="categorie-link" href="#">Gabinetes</a> </li>
             <li> <a class="categorie-link" href="#">Memorias RAM</a> </li>
+            <li> <a class="categorie-link" href="#">Monitores</a> </li>
             <li> <a class="categorie-link" href="#">Motherboards</a> </li>
             <li> <a class="categorie-link" href="#">Mouses</a> </li>
             <li> <a class="categorie-link" href="#">Placas de video</a> </li>
@@ -51,7 +52,10 @@
             <p>No se encontraron productos.</p>
           @endforelse
 
-            {{ $products->links() }}
+            <div class="pagination pagination-sm">
+              {{ $products->links() }}
+            </div>
+
 
         </div>
       </div>

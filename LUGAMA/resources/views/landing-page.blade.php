@@ -43,7 +43,7 @@
                       @endforelse
                 </section>
                 <div class="div-button">
-                    <button class="more-products-button" type="button" name="button">ver más productos</button>
+                    <button class="more-products-button" type="button" name="button"><a href="{{url('/products')}}">ver más productos</a></button>
                 </div>
               </div> <!-- fin de productos -->
       </div>

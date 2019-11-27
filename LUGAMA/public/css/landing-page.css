@@ -126,6 +126,13 @@ button {
   border-radius: 5px;
 }
 
+button.more-products-button a{
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 100%;
+}
+
 .banner-nvidia{
   height: auto;
   width: 100%;
@@ -217,6 +224,10 @@ div.redesociales{
 }
 
 @media screen and (max-width: 768px){
+  a.logo-letras{
+    display: none;
+  }
+
   .menu {
     display: block;
     cursor: pointer;

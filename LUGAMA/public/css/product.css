@@ -1,3 +1,24 @@
+.products-container{
+  display: flex;
+}
+.categories{
+  margin-left: 3vw;
+  padding-top: 5vh;
+  display: flex;
+}
+ul {
+  list-style: none;
+}
+li.categories-title{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+a.categorie-link{
+  color: black;
+  font-size: 16px;
+}
+
 div.conteiner{
   display: flex;
   justify-content: center;
@@ -7,6 +28,13 @@ div.conteiner{
 
 img.product-img{
   border: 1px solid grey;
+  width: 40vw;
+  margin-left: 5vw;
+}
+
+div.product-info{
+  width: 40vw;
+  margin-left: 5vw;
 }
 
 h1.product-name{
@@ -14,5 +42,5 @@ h1.product-name{
 }
 h2.product-price{
   font-weight: bold;
-  font-size: 10vh;
+  font-size: 7vh;
 }
