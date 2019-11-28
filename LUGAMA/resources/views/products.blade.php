@@ -29,6 +29,9 @@
         <div class="categories">
           <ul>
             <li class="categories-title">Categorías</li>
+            {{-- @foreach ($categories as $category)
+              <li> <a class="categorie-link" href="#"></a> {{ $category->id }} </li>
+            @endforeach --}}
             <li> <a class="categorie-link" href="#">Auriculares</a> </li>
             <li> <a class="categorie-link" href="#">Gabinetes</a> </li>
             <li> <a class="categorie-link" href="#">Memorias RAM</a> </li>
