@@ -31,6 +31,7 @@ class ProductsTableSeeder extends Seeder
           'price' => '5400',
           'featured_img' => 'LOGITECH-AURICULAR-G433-BLACK-7.1-HEADSET.jpg',
         ]);
+//<<<<<<< Updated upstream
         Product::create([
           'name' => 'SAMSUNG AURICULAR VINCHA P.47',
           'description' => 'Bluetooth',
@@ -79,6 +80,57 @@ class ProductsTableSeeder extends Seeder
           'price' => '2600',
           'featured_img' => 'macros.jpg'
         ]);
+
+          Product::create([
+        "name" => "SAMSUNG AURICULAR VINCHA P.47",
+        "description"=>"Bluetooth",
+        "price"=>"950",
+        "features_img"=>"colores.jpg"
+      ]);
+
+      Product::create([
+        "name" =>"APPLE AURICULAR I7s ",
+        "description"=>"Bluetooth",
+        "price"=>"1000",
+        "features_img"=>"i7.jpg"
+      ]);
+  Product::create([
+        "name" =>"TRUE WIRLESS AURICULAR TWINS",
+        "description"=>"Bluetooth",
+        "price"=>"2000",
+        "features_img"=>"twins.jpg"
+      ]);
+  Product::create([
+        "name" =>"XIAOMI AURICULAR REDMI AIRDOTS",
+        "description"=>"bluetooh",
+        "price"=>"3000",
+        "features_img"=>"xioami.jpg"
+      ]);
+  Product::create([
+        "name" =>"NOGANET AURICULAR HYDRA",
+        "description"=>"",
+        "price"=>"1200",
+        "features_img"=>"hydra.jpg"
+      ]);
+  Product::create([
+        "name" => "KOTION AURICULAR G2600",
+        "description"=>"",
+        "price"=>"2000",
+        "features_img"=>"camuflados.jpg"
+      ]);
+  Product::create([
+        "name" =>"SONY AURICULAR ABLUE037",
+        "description"=>"",
+        "price"=>"3000",
+        "features_img"=>"gadnic.jpg"
+      ]);
+  Product::create([
+        "name" =>"LOGITECH AURICULAR G633 ",
+        "description"=>"",
+        "price"=>"",
+        "features_img"=>"macros.jpg"
+      ]);
+//>>>>>>> Stashed changes
       //Gabinetes
       Product::create([
         'name' => 'LNZ GABINETE LZ10 RGB',
