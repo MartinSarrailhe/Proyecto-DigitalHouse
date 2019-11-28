@@ -1,8 +1,6 @@
 <?php
-
 use App\Product;
 use Illuminate\Database\Seeder;
-
 class ProductsTableSeeder extends Seeder
 {
     /**
@@ -31,7 +29,6 @@ class ProductsTableSeeder extends Seeder
           'price' => '5400',
           'featured_img' => 'LOGITECH-AURICULAR-G433-BLACK-7.1-HEADSET.jpg',
         ]);
-//<<<<<<< Updated upstream
         Product::create([
           'name' => 'SAMSUNG AURICULAR VINCHA P.47',
           'description' => 'Bluetooth',
@@ -80,57 +77,6 @@ class ProductsTableSeeder extends Seeder
           'price' => '2600',
           'featured_img' => 'macros.jpg'
         ]);
-
-          Product::create([
-        "name" => "SAMSUNG AURICULAR VINCHA P.47",
-        "description"=>"Bluetooth",
-        "price"=>"950",
-        "features_img"=>"colores.jpg"
-      ]);
-
-      Product::create([
-        "name" =>"APPLE AURICULAR I7s ",
-        "description"=>"Bluetooth",
-        "price"=>"1000",
-        "features_img"=>"i7.jpg"
-      ]);
-  Product::create([
-        "name" =>"TRUE WIRLESS AURICULAR TWINS",
-        "description"=>"Bluetooth",
-        "price"=>"2000",
-        "features_img"=>"twins.jpg"
-      ]);
-  Product::create([
-        "name" =>"XIAOMI AURICULAR REDMI AIRDOTS",
-        "description"=>"bluetooh",
-        "price"=>"3000",
-        "features_img"=>"xioami.jpg"
-      ]);
-  Product::create([
-        "name" =>"NOGANET AURICULAR HYDRA",
-        "description"=>"",
-        "price"=>"1200",
-        "features_img"=>"hydra.jpg"
-      ]);
-  Product::create([
-        "name" => "KOTION AURICULAR G2600",
-        "description"=>"",
-        "price"=>"2000",
-        "features_img"=>"camuflados.jpg"
-      ]);
-  Product::create([
-        "name" =>"SONY AURICULAR ABLUE037",
-        "description"=>"",
-        "price"=>"3000",
-        "features_img"=>"gadnic.jpg"
-      ]);
-  Product::create([
-        "name" =>"LOGITECH AURICULAR G633 ",
-        "description"=>"",
-        "price"=>"",
-        "features_img"=>"macros.jpg"
-      ]);
-//>>>>>>> Stashed changes
       //Gabinetes
       Product::create([
         'name' => 'LNZ GABINETE LZ10 RGB',
@@ -186,7 +132,6 @@ class ProductsTableSeeder extends Seeder
         'price' => '10000',
         'featured_img' => 'evga.jpg'
       ]);
-
       //Memorias RAM
       Product::create([
         'name' => 'KINGSTON 8GB 2400MHZ HYPERX FURY - BLACK DDR4',
@@ -224,8 +169,6 @@ class ProductsTableSeeder extends Seeder
         'price' => '80000',
         'featured_img' => 'predator1.jpg'
       ]);
-
-
       //Motherboards
       Product::create([
         'name' => 'MSI MOTHER A320M PRO - M2 V2',
@@ -257,7 +200,6 @@ class ProductsTableSeeder extends Seeder
         'price' => '8000',
         'featured_img' => 'placaAsus.jpg'
       ]);
-
       //Monitores
       Product::create([
         'name' => 'SENTEY MONITOR 27" 144 HZ CURVO MS-2700 2K',
@@ -283,7 +225,6 @@ class ProductsTableSeeder extends Seeder
         'price' => '174000',
         'featured_img' => '1547_D7M0ZQVUXO.jpg',
       ]);
-
       //Mouses
       Product::create([
         'name' => 'SENTEY GRYD GAMING GS-3311',
@@ -327,7 +268,6 @@ class ProductsTableSeeder extends Seeder
         'price' => '800',
         'featured_img' => 'netmak1.jpg'
       ]);
-
       //Placas de video
       Product::create([
         'name' => 'SENTEY RX 580 4GB DDR5 GAMING - TRIPLE FAN',
@@ -377,7 +317,6 @@ class ProductsTableSeeder extends Seeder
         'price' => '10000',
         'featured_img' => 'armour.jpg'
       ]);
-
       //Procesadores
       Product::create([
         'name' => 'INTEL COFFEE LAKE CORE I3 8100',
@@ -500,7 +439,6 @@ class ProductsTableSeeder extends Seeder
         'price' => '1000',
         'featured_img' => 'Genius teclado.jpg'
       ]);
-
       Product::create([
         'name' => 'LOGITECH TECLADO INALAMBRICA K120',
         'description' => '',
@@ -513,6 +451,5 @@ class ProductsTableSeeder extends Seeder
         'price' => '500',
         'featured_img' => 'teclado inalambrico pc notebook.jpg'
       ]);
-
     }
 }
