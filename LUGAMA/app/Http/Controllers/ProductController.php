@@ -16,12 +16,10 @@ class ProductController extends Controller
     public function index()
     {
       if (request()->category) {
-        $products = Product::with('categories')->whereHas('categories', function($query){
-          $query->where('id', request()->category);
-        })->get();
+        $products = Product:: //Logica para que muestre productos de categoria seleccionada.
         $categories = Category::all();
       }else {
-        $products = Product::paginate(16);
+        $products = Product::orderBy('name')->paginate(16);
         $categories = Category::all();
       }
 
