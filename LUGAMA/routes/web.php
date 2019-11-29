@@ -30,4 +30,6 @@ Route::get('/product/{id}', 'ProductController@show')->name('product');
 Route::get('/products/{product}', 'ProductController@show')->name('product.show');
 
 Route::get('/cart', 'CartController@index')->middleware('auth');
-// Route::post('/addtocart', 'CartController@store');
+Route::post('/addtocart', 'CartController@store')->middleware('auth');
+Route::post('/cartclose', 'CartController@cartclose')->middleware('auth');
+Route::get('/history', 'CartController@history')->middleware('auth');

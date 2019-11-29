@@ -25,27 +25,25 @@
       </div>
 
       <div class="products-container">
-        <div class="categories">
+        {{-- <div class="categories">
           <ul>
             <li class="categories-title">Categorías</li>
-            <li> <a class="categorie-link" href="#">Auriculares</a> </li>
-            <li> <a class="categorie-link" href="#">Gabinetes</a> </li>
-            <li> <a class="categorie-link" href="#">Memorias RAM</a> </li>
-            <li> <a class="categorie-link" href="#">Monitores</a> </li>
-            <li> <a class="categorie-link" href="#">Motherboards</a> </li>
-            <li> <a class="categorie-link" href="#">Mouses</a> </li>
-            <li> <a class="categorie-link" href="#">Placas de video</a> </li>
-            <li> <a class="categorie-link" href="#">Procesadores</a> </li>
-            <li> <a class="categorie-link" href="#">Teclados</a> </li>
+            @foreach ($categories as $category)
+              <li> <a class="categorie-link" href="{{ route('products', ['category' => $category->id]) }}"> {{ $category->name }} </a> </li>
+            @endforeach
           </ul>
-        </div>
+        </div> --}}
         <div class="conteiner">
           <div class=""> <img class="product-img" src="/img/{{ $product->featured_img }}" alt=""> </div>
           <div class="product-info">
             <h1 class="product-name">{{ $product->name }}</h1>
             <h2 class="product-price">${{ $product->price }}</h2>
             <p class="product-detail">{{ $product->description }}</p>
-            <button type="submit" name="button">Agregar al carrito</button>
+              <form class="" action="/addtocart" method="post">
+                @csrf
+                <input type="hidden" name="id" value="{{$product->id}}">
+                <button class="btn btn-success" type="submit">Agregar al carrito</a>
+              </form>
           </div>
         </div>
     </div>

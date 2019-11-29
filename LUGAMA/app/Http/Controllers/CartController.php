@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
+use App\Product;
+use Auth;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -15,7 +17,7 @@ class CartController extends Controller
     public function index()
     {
       $cart = Cart::where("user_id", Auth::user()->id)->where("status",0)->get();
-    return view('cart', compact('cart'));
+      return view('cart', compact('cart'));
     }
 
     /**
@@ -98,7 +100,7 @@ class CartController extends Controller
     public function cartclose(Request $req){
       //traigo todos los productos del carrtito del usuario logueado.
       $items = Cart::where("user_id", Auth::user()->id)->where("status",0)->get();
-      $cart_number = Cart::max('cart_number') +1;
+      $cart_number = Cart::max('cart_number') + 1;
       foreach($items as $item){
         $item->status = 1;
         $item->cart_number = $cart_number;

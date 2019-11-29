@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,20 @@ class ProductController extends Controller
      */
     public function index()
     {
-      $products = Product::paginate(16);
-      return view('products')->with('products', $products);
+      if (request()->category) {
+        $products = Product::with('categories')->whereHas('categories', function($query){
+          $query->where('id', request()->category);
+        })->get();
+        $categories = Category::all();
+      }else {
+        $products = Product::paginate(16);
+        $categories = Category::all();
+      }
+
+      return view('products')->with([
+        'categories'=> $categories,
+        'products' => $products,
+      ]);
     }
 
     /**

@@ -27,32 +27,19 @@
       </div>
 
       <div class="container">
-        <h2>Mi carrito</h2>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Producto</th>
-              <th scope="col">Cantidad</th>
-              <th scope="col">Precio</th>
-            </tr>
-          </thead>
-          <tbody>
-            @foreach ($cart as $item)
-              <tr>
-                <th scope="row">{{$item->id}}</th>
-                <td>{{$item->name}}</td>
-                <td>{{$item->quantity}}</td>
-                <td>{{$item->price}}</td>
-              </tr>
-            @endforeach
-          </tbody>
-        </table>
-
-        <form class="" action="/cartclose" method="post">
-          @csrf
-            <button type="submit" class="btn btn-success">Comprar</button>
-        </form>
+        <h2>Mis compras</h2>
+          @forelse ($carts as $cart_number => $cart)
+            <p>Carrito nº: {{$cart_number}}</p>
+            <ul>
+            @forelse ($cart as $item)
+              <li>Producto: {{$item->name}}</li>
+            @empty
+              <p>No hay productos para este carrito.</p>
+            @endforelse
+            </ul>
+          @empty
+            <p>No hay compras.</p>
+          @endforelse
 
 
       </div>
