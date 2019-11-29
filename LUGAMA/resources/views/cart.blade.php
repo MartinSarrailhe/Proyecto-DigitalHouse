@@ -27,7 +27,7 @@
       </div>
 
       <div class="container">
-        <h2>Mi carrito</h2>
+        <h2 style="margin-top: 10vh; font-weight: bold;">Mi carrito</h2>
         <table class="table">
           <thead>
             <tr>
@@ -35,21 +35,29 @@
               <th scope="col">Producto</th>
               <th scope="col">Cantidad</th>
               <th scope="col">Precio</th>
+              <th scope="col">Sub-total</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
-            @foreach ($cart as $item)
+            @forelse ($cart as $item)
               <tr>
                 <th scope="row">{{$item->id}}</th>
                 <td>{{$item->name}}</td>
                 <td>{{$item->quantity}}</td>
                 <td>{{$item->price}}</td>
+                <td>{{$item->price * $item->quantity}}</td>
+                <td><a href="/delete/{{$item->id}}">Eliminar</a></td>
               </tr>
-            @endforeach
+            @empty
+              <p style="font-size: 3vh;">Su carrito está vacío.</p>
+            @endforelse
           </tbody>
         </table>
 
-        <form class="" action="/cartclose" method="post">
+        <p style="font-size: 4vh;font-weight: bold; text-align: end;">Total: ${{$total}}</p>
+
+        <form class="" style="display:flex; justify-content:flex-end; margin-bottom: 10vh;" action="/cartclose" method="post">
           @csrf
             <button type="submit" class="btn btn-success">Comprar</button>
         </form>

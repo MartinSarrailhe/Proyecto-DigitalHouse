@@ -17,7 +17,13 @@ class CartController extends Controller
     public function index()
     {
       $cart = Cart::where("user_id", Auth::user()->id)->where("status",0)->get();
-      return view('cart', compact('cart'));
+
+      $total = 0;
+      foreach ($cart as $item) {
+          $total = $total +($item->quantity * $item->price);
+      }
+
+      return view('cart', compact('cart', 'total'));
     }
 
     /**
@@ -92,9 +98,14 @@ class CartController extends Controller
      * @param  \App\Cart  $cart
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cart $cart)
+    public function destroy($id)
     {
-        //
+      $item = Cart::where('id',$id)
+      ->where('user_id',Auth::user()->id)
+      ->where('status',0)->get(); //La consulta nos devuelve un array de datos con 1 solo item.
+      $item[0]->delete(); //El item está en la posición 0 del array. Lo eliminamos.
+
+      return redirect('/cart');
     }
 
     public function cartclose(Request $req){

@@ -192,9 +192,15 @@ button.more-products-button {
 }
 
 footer {
+  display: flex;
+  justify-content: space-evenly;
   background-color: #565656;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4) inset;
   color: #f0f0f0;
+}
+
+div.information, div.faqs, div.redes{
+  width: 30%;
 }
 
 ul.social-network{
@@ -250,6 +256,15 @@ div.redesociales{
   /* ul.nav-links li a:focus{
     background-color: black;
   } */
+  footer {
+    display: block;
+    background-color: #565656;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4) inset;
+    color: #f0f0f0;
+  }
+  div.information, div.faqs, div.redes{
+    width: 100%;
+  }
 }
 
 .nav-active{
