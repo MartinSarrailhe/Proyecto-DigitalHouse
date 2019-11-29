@@ -15,14 +15,23 @@ class ProductsTableSeeder extends Seeder
       //Auriculares
         Product::create([
           'name' => 'MARVO AURICULAR HEADSET - HG9032 7.1 USB LED RED',
-          'description' => '',
+          'description' => 'Iluminación: LED ROJO
+                            Respuesta de frecuencia: 20 Hz - 20 KHz
+                            Tamaño del altavoz: 50 mm
+                            Sensibilidad del altavoz: 116 dB ± 3 dB
+                            Impedancia del altavoz: 32 O
+                            Tipo de micrófono: omnidireccional
+                            Tamaño del micrófono: 6x5 mm',
           'price' => '2615',
           'category_id' => '1',
           'featured_img' => 'MARVO-AURICULAR-HEADSET-HG9032-7.1-USB-LED-RED.jpg',
         ]);
         Product::create([
           'name' => 'LOGITECH AURICULAR G332 GAMING HEADSET - PS4 - XBOX - PC',
-          'description' => '',
+          'description' => 'Respuesta de frecuencia: 20 Hz – 20 kHz
+                            Sensibilidad: 107 dB SPL/mW
+                            Patrón de captación de micrófono: Cardioide (unidireccional)
+                            Requisitos: Windows® 10, Windows 8.1, Windows 7, Mac®, Nintendo Switch™, PS4, Xbox One, tablet o dispositivo móvil',
           'price' => '3200',
           'category_id' => '1',
           'featured_img' => 'LOGITECH-AURICULAR-G433-BLACK-7.1-HEADSET.jpg',

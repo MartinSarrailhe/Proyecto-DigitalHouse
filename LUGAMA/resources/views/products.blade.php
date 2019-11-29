@@ -27,8 +27,8 @@
 
       <div class="products-container">
         <div class="categories">
+          <h2 class="categories-title">Categorías</h2>
           <ul>
-            <li class="categories-title">Categorías</li>
             @foreach ($categories as $category)
               <li> <a class="categorie-link" href="{{ route('products', ['category' => $category->id]) }}"> {{ $category->name }} </a> </li>
             @endforeach

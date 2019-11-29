@@ -5,11 +5,12 @@
   margin-left: 3vw;
   padding-top: 5vh;
   display: flex;
+  flex-direction: column;
 }
 ul {
   list-style: none;
 }
-li.categories-title{
+h2.categories-title{
   font-weight: bold;
   font-size: 25px;
 }
@@ -33,4 +34,36 @@ article.products{
 
 span.product-name{
   font-size: 16px;
+}
+
+@media screen and (max-width: 768px){
+  div.products-container{
+    display: block;
+  }
+  div.categories{
+    margin-left: 0;
+  }
+  h2.categories-title{
+    text-align: center;
+  }
+  ul{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  li{
+    width: 30%;
+  }
+  div.pagination.pagination-sm{
+    width: 100%;
+  }
+  ul.pagination{
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+    flex-wrap: nowrap;
+  }
 }

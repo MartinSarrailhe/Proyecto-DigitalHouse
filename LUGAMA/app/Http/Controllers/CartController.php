@@ -117,7 +117,7 @@ class CartController extends Controller
         $item->cart_number = $cart_number;
         $item->save();
       }
-      return redirect('home');
+      return view('/thankyou');
     }
 
 

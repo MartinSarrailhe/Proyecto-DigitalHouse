@@ -33,4 +33,5 @@ Route::get('/cart', 'CartController@index')->middleware('auth');
 Route::post('/addtocart', 'CartController@store')->middleware('auth');
 Route::get('/delete/{id}', 'CartController@destroy')->middleware('auth');
 Route::post('/cartclose', 'CartController@cartclose')->middleware('auth');
+Route::get('/thankyou', 'CartController@cartclose')->middleware('auth');
 Route::get('/history', 'CartController@history')->middleware('auth');
