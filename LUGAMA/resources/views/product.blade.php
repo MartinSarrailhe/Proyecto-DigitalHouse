@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="{{ asset('css/app.css')}}">
         <link rel="stylesheet" href="{{ asset('css/landing-page.css')}}">
         <link rel="stylesheet" href="{{ asset('css/register.css')}}">
-        <link rel="stylesheet" href="{{ asset('/css/product.css')}}">
+        <link rel="stylesheet" href="{{ asset('css/product.css')}}">
 
     </head>
 
@@ -46,6 +46,9 @@
               </form>
           </div>
         </div>
-    </div>
+      </div>
+
+      @include('might-also-like')
+
       @include('footer')
     </body>

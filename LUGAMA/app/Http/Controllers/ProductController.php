@@ -59,8 +59,12 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::find($id);
+        $mightAlsoLike = Product::where('id', '!=', $id)->inRandomOrder()->take(4)->get();
 
-        return view('product')->with('product', $product);
+        return view('product')->with([
+          'product' => $product,
+          'mightAlsoLike' => $mightAlsoLike,
+        ]);
     }
 
 
