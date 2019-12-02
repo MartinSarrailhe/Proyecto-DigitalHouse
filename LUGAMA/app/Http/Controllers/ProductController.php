@@ -34,6 +34,20 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function category($id)
+     {
+
+       $products = Product::where('category_id', $id)->paginate(16);
+       $categories = Category::all();
+
+       return view('products')->with([
+         'categories' => $categories,
+         'products' => $products,
+       ]);
+
+     }
+
     public function create()
     {
         //

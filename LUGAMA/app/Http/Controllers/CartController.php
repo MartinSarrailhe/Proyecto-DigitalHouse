@@ -104,7 +104,6 @@ class CartController extends Controller
       ->where('user_id',Auth::user()->id)
       ->where('status',0)->get(); //La consulta nos devuelve un array de datos con 1 solo item.
       $item[0]->delete(); //El item está en la posición 0 del array. Lo eliminamos.
-
       return redirect('/cart');
     }
 

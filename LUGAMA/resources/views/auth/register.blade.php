@@ -30,7 +30,7 @@
                         @csrf
 
                         <div class="form-group">
-                            <label for="name" class="">{{ __('Name') }}</label>
+                            <label for="name" class="">{{ __('Nombre') }}</label>
 
                             <div class="">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="email" class="">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="">{{ __('Correo electrónico') }}</label>
 
                             <div class="">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -72,7 +72,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password-confirm" class="">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="">{{ __('Confirmar Password') }}</label>
 
                             <div class="">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">

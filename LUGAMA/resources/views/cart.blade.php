@@ -40,9 +40,10 @@
             </tr>
           </thead>
           <tbody>
+            <?php $idcart = 1 ?>
             @forelse ($cart as $item)
               <tr>
-                <th scope="row">{{$item->id}}</th>
+                <th scope="row">{{$idcart}}<?php $idcart++; ?></th>
                 <td>{{$item->name}}</td>
                 <td>{{$item->quantity}}</td>
                 <td>{{$item->price}}</td>

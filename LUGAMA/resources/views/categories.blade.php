@@ -30,7 +30,7 @@
           <h2 class="categories-title">Categorías</h2>
           <ul>
             @foreach ($categories as $category)
-              <li> <a class="categorie-link" href="{{route('categoria', $category->id)}}"> {{ $category->name }} </a> </li>
+              <li> <a class="categorie-link" href="{{url('/products/category/$category->id')}}"> {{ $category->name }} </a> </li>
             @endforeach
           </ul>
         </div>
