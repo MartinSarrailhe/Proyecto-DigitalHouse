@@ -19,10 +19,7 @@
 
     <body>
       @include('header')
-      <div class="seach-box">
-             <input class="search-input" type="search" placeholder="Buscar...">
-             <button>Buscar</button>
-      </div>
+      @include('search-bar')
 
       <div class="products-container">
         {{-- <div class="categories">

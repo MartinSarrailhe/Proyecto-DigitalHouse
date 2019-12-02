@@ -21,10 +21,7 @@
     <body>
       @include('header')
 
-      <div class="seach-box">
-             <input class="search-input" type="search" placeholder="Buscar...">
-             <button>Buscar</button>
-      </div>
+      @include('search-bar')
 
         <div class="thanks-for-buy">
           <img src="img/thankyou.png" alt="">

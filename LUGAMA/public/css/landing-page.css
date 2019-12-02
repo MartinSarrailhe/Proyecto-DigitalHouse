@@ -138,6 +138,26 @@ button.more-products-button a{
   width: 100%;
 }
 
+div.img-button{
+  position: relative;
+}
+button#anterior{
+  left: 0;
+}
+button#siguiente{
+  right: 0;
+}
+button#anterior, #siguiente{
+  background-color: transparent;
+  font-size: 3em;
+  font-weight: bold;
+  color: white;
+  border: none;
+  position: absolute;
+  width: 2%;
+  top: 45%;
+}
+
 div.popular-products{
   margin-top: 3vh;
 }

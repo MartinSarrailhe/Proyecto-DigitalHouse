@@ -1,0 +1,10 @@
+h1.search-results{
+  margin-left: 2%;
+  margin-top: 2vh;
+}
+p.search-count{
+  margin-left: 2%;
+}
+p.product-not-found{
+  margin-left: 2%;
+}

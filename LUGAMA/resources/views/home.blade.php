@@ -39,10 +39,7 @@
     </div>
 </div> --}}
 
-<div class="seach-box">
-       <input class="search-input" type="search" placeholder="Buscar...">
-       <button>Buscar</button>
-</div>
+@include('search-bar')
 
 <div class="content">
         <img class="banner-nvidia" src="img/widenvidia.jpg" alt="">

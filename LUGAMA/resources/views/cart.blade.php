@@ -21,10 +21,7 @@
       @include('header')
 
 
-      <div class="seach-box">
-             <input class="search-input" type="search" placeholder="Buscar...">
-             <button>Buscar</button>
-      </div>
+      @include('search-bar')
 
       <div class="container">
         <h2 style="margin-top: 10vh; font-weight: bold;">Mi carrito</h2>

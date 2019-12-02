@@ -15,13 +15,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-      if (request()->category) {
-        $products = Product:: //Logica para que muestre productos de categoria seleccionada.
-        $categories = Category::all();
-      }else {
-        $products = Product::orderBy('name')->paginate(16);
-        $categories = Category::all();
-      }
+      $products = Product::orderBy('name')->paginate(16);
+      $categories = Category::all();
 
       return view('products')->with([
         'categories'=> $categories,
@@ -82,13 +77,18 @@ class ProductController extends Controller
     }
 
 
-    //POSIBLE RUTA FUTURA PARA EL CARRITO
-    // public function show(Product $product)
-    // {
-    //     $productDetail = Product::find($product->id);
-    //
-    //     return view('product', compact($product));
-    // }
+    public function search(Request $request)
+    {
+      $query = $request->input('query');
+
+      $products = Product::where('name', 'like', "%$query%")->get();
+      $category = Category::where('name', 'like', "%$query%")->get();
+
+      return view('search-results')->with([
+        'products' => $products,
+        'category' => $category,
+      ]);
+    }
 
     /**
      * Show the form for editing the specified resource.
