@@ -25,6 +25,7 @@ header {
   /* background-size: cover; */
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 
 div.space{
@@ -156,6 +157,7 @@ button#anterior, #siguiente{
   position: absolute;
   width: 2%;
   top: 45%;
+  z-index: 0;
 }
 
 div.popular-products{
@@ -284,6 +286,9 @@ div.redesociales{
   }
   div.information, div.faqs, div.redes{
     width: 100%;
+  }
+  ul.nav-links li a.burguer-links{
+    font-size: 1.5em;
   }
 }
 

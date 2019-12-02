@@ -38,3 +38,5 @@ Route::get('/history', 'CartController@history')->middleware('auth');
 Route::get('/products/category/{name}', 'ProductController@category')->name('categoria');
 Route::get('/buildpc/{categoria}', 'ProductController@category')->name('build');
 Route::get('/search', 'ProductController@search')->name('search');
+
+Route::get('/admin', 'HomeController@index')->name('admin')->middleware('auth');
