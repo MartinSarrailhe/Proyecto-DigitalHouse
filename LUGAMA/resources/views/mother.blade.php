@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{$categoria->name}} - LUGAMA</title>
+        <title>Productos - LUGAMA</title>
 
         <!--Fuente-->
         <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
@@ -23,14 +23,7 @@
       @include('search-bar')
 
       <div class="products-container">
-        <div class="categories">
-          <h2 class="categories-title">Categorías</h2>
-          <ul>
-            @foreach ($categories as $category)
-              <li> <a class="categorie-link" href="{{route('categoria', $category->id)}}"> {{ $category->name }} </a> </li>
-            @endforeach
-          </ul>
-        </div>
+
 
         <div class="products">
           @forelse ($products as $product)
@@ -42,11 +35,6 @@
           @empty
             <p>No se encontraron productos.</p>
           @endforelse
-
-            <div class="pagination pagination-sm">
-              {{ $products->links() }}
-            </div>
-
 
         </div>
       </div>

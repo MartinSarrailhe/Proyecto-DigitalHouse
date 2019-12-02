@@ -36,7 +36,16 @@ Route::post('/cartclose', 'CartController@cartclose')->middleware('auth');
 Route::get('/thankyou', 'CartController@cartclose')->middleware('auth');
 Route::get('/history', 'CartController@history')->middleware('auth');
 Route::get('/products/category/{name}', 'ProductController@category')->name('categoria');
-Route::get('/buildpc/{categoria}', 'ProductController@category')->name('build');
+Route::get('/buildpc/mother', 'ProductController@mother')->name('mother');
+Route::get('/buildpc/cpu', 'ProductController@category')->name('build');
+Route::get('/buildpc/ram', 'ProductController@category')->name('build');
+Route::get('/buildpc/gabinete', 'ProductController@category')->name('build');
+Route::get('/buildpc/gpu', 'ProductController@category')->name('build');
+Route::get('/buildpc/monitor', 'ProductController@category')->name('build');
+Route::get('/buildpc/mouse', 'ProductController@category')->name('build');
+Route::get('/buildpc/teclado', 'ProductController@category')->name('build');
+Route::get('/buildpc/auriculares', 'ProductController@category')->name('build');
+
 Route::get('/search', 'ProductController@search')->name('search');
 
 Route::get('/admin', 'HomeController@index')->name('admin')->middleware('auth');
