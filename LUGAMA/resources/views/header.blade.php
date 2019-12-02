@@ -17,15 +17,9 @@
           </div>
 
           <ul class="nav-links">
-<<<<<<< HEAD
             <li> <a class="burguer-links" href="{{url('/')}}">Inicio</a> </li>
             <li> <a class="burguer-links" href="{{url('/products')}}">Productos</a> </li>
-            <li> <a class="burguer-links" href="#">ARMA TU PC</a> </li>
-=======
-            <li> <a href="{{url('/')}}">Inicio</a> </li>
-            <li> <a href="{{url('/products')}}">Productos</a> </li>
-            <li> <a href="{{route('mother')}}">ARMA TU PC</a> </li>
->>>>>>> master
+            <li> <a class="burguer-links" href="{{route('mother')}}">ARMA TU PC</a> </li>
           </ul>
 
 
