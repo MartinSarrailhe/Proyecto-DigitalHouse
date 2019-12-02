@@ -35,9 +35,11 @@ class ProductController extends Controller
 
        $products = Product::where('category_id', $id)->paginate(16);
        $categories = Category::all();
+       $categoria = Category::find($id);
 
-       return view('products')->with([
+       return view('categories')->with([
          'categories' => $categories,
+         'categoria' => $categoria,
          'products' => $products,
        ]);
 
@@ -90,6 +92,15 @@ class ProductController extends Controller
       ]);
     }
 
+    public function mother(){
+
+      $products = Product::where('category_id', 5)->get();
+
+      return view('mother')->with([
+        'products' => $products,
+      ]);
+
+    }
     /**
      * Show the form for editing the specified resource.
      *

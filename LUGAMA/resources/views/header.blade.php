@@ -19,7 +19,7 @@
           <ul class="nav-links">
             <li> <a href="{{url('/')}}">Inicio</a> </li>
             <li> <a href="{{url('/products')}}">Productos</a> </li>
-            <li> <a href="#">ARMA TU PC</a> </li>
+            <li> <a href="{{route('mother')}}">ARMA TU PC</a> </li>
           </ul>
 
 
