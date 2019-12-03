@@ -1,0 +1,23 @@
+form.boton-comprar-form{
+  display:flex;
+  justify-content:flex-end;
+  margin-bottom: 10vh;
+}
+
+button.boton-comprar {
+  background-color: #3490dc;
+  color: white;
+  border:none;
+  padding: 5px;
+}
+
+@media screen and (max-width: 768px){
+  form.boton-comprar{
+    display:flex;
+    margin-bottom: 10vh;
+    align-items: center;
+  }
+  button.boton-comprar{
+    width: 50%;
+  }
+}

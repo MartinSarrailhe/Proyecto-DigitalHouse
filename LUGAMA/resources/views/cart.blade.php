@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="{{ asset('css/app.css')}}">
         <link rel="stylesheet" href="{{ asset('css/landing-page.css')}}">
         <link rel="stylesheet" href="{{ asset('css/register.css')}}">
+        <link rel="stylesheet" href="{{ asset('css/cart.css')}}">
 
     </head>
 
@@ -51,9 +52,9 @@
 
         <p style="font-size: 4vh;font-weight: bold; text-align: end;">Total: ${{$total}}</p>
 
-        <form class="" style="display:flex; justify-content:flex-end; margin-bottom: 10vh;" action="/cartclose" method="post">
+        <form class="boton-comprar-form" action="/cartclose" method="post">
           @csrf
-            <button type="submit" class="btn btn-success">Comprar</button>
+            <button class="boton-comprar" type="submit" class="btn btn-success">Comprar</button>
         </form>
 
 
