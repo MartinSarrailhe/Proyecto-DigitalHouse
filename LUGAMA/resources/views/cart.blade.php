@@ -30,9 +30,7 @@
             <tr>
               <th scope="col">#</th>
               <th scope="col">Producto</th>
-              <th scope="col">Cantidad</th>
               <th scope="col">Precio</th>
-              <th scope="col">Sub-total</th>
               <th scope="col"></th>
             </tr>
           </thead>
@@ -42,9 +40,7 @@
               <tr>
                 <th scope="row">{{$idcart}}<?php $idcart++; ?></th>
                 <td>{{$item->name}}</td>
-                <td>{{$item->quantity}}</td>
                 <td>{{$item->price}}</td>
-                <td>{{$item->price * $item->quantity}}</td>
                 <td><a href="/delete/{{$item->id}}">Eliminar</a></td>
               </tr>
             @empty
@@ -66,6 +62,6 @@
 
 
       @include('footer')
-      
+
     </body>
 </html>

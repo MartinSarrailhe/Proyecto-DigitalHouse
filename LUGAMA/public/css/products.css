@@ -46,16 +46,17 @@ span.product-name{
   h2.categories-title{
     text-align: center;
   }
-  ul{
+  ul.listacategoria{
     text-align: center;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
-  li{
+  li.nombrescategoria{
     width: 30%;
   }
+
   div.pagination.pagination-sm{
     width: 100%;
   }

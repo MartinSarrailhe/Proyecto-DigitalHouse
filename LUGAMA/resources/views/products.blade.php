@@ -25,9 +25,9 @@
       <div class="products-container">
         <div class="categories">
           <h2 class="categories-title">Categorías</h2>
-          <ul>
+          <ul class="listacategoria">
             @foreach ($categories as $category)
-              <li> <a class="categorie-link" href="{{route('categoria', $category->id)}}"> {{ $category->name }} </a> </li>
+              <li class="nombrescategoria"> <a class="categorie-link" href="{{route('categoria', $category->id)}}"> {{ $category->name }} </a> </li>
             @endforeach
           </ul>
         </div>

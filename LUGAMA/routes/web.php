@@ -29,7 +29,7 @@ Route::get('/products', 'ProductController@index')->name('products');
 Route::get('/product/{id}', 'ProductController@show')->name('product');
 Route::get('/products/{product}', 'ProductController@show')->name('product.show');
 
-Route::get('/cart', 'CartController@index')->middleware('auth');
+Route::get('/cart', 'CartController@index')->middleware('auth')->name('cart');
 Route::post('/addtocart', 'CartController@store')->middleware('auth');
 Route::get('/delete/{id}', 'CartController@destroy')->middleware('auth');
 Route::post('/cartclose', 'CartController@cartclose')->middleware('auth');

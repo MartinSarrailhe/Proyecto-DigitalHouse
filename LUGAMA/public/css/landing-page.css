@@ -17,6 +17,7 @@ body {
   font-family: "Rajdhani", sans-serif;
   background-color: #f2f2f2;
   margin: 0;
+  
 }
 
 header {
@@ -306,6 +307,11 @@ div.redesociales{
   font-weight: bold;
   font-size: 1.5em;
 
+}
+
+address, dl, ol, ul{
+  margin-bottom: 0;
+  padding-bottom: 5px;
 }
 
 

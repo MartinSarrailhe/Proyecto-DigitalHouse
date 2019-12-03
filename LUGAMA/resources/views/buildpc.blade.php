@@ -57,10 +57,10 @@
       </div>
       <div class="omitir">
 
-        @if($product->category_id >= 5)
-        <a class="omitirtexto" href="{{route('buildpc', $product->category_id + 1)}}"><button class="btn btn-success omitirfinal" style="width:30%;" type="submit">Omitir</a>
-        @elseif($product->category_id == 9)
-        <a class="omitirtexto" href="{{route('/cart')}}"><button class="btn btn-success omitirfinal" style="width:30%;" type="submit">Omitir</a>
+        @if($categoria->id >= 5 && $categoria->id < 9)
+          <a class="omitirtexto" href="{{route('buildpc', $product->category_id + 1)}}"><button class="btn btn-success omitirfinal" style="width:30%;" type="submit">Omitir</a>
+        @elseif($categoria->id == 9)
+          <a class="omitirtexto" href="{{route('cart')}}"><button href="{{route('cart')}}" class="btn btn-success omitirfinal" style="width:30%;" type="submit">Omitir</a>
         @endif
 
       </div>
