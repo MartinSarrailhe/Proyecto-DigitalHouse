@@ -39,7 +39,7 @@
               <form class="" action="/addtocart" method="post">
                 @csrf
                 <input type="hidden" name="id" value="{{$product->id}}">
-                <button class="btn btn-success" style="width:50%;" type="submit">Agregar al carrito</a>
+                <button class="btn btn-success button-add-to-cart" type="submit">Agregar al carrito</a>
               </form>
           </div>
         </div>

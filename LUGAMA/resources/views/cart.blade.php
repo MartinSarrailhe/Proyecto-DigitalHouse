@@ -66,6 +66,6 @@
 
 
       @include('footer')
-
+      
     </body>
 </html>
