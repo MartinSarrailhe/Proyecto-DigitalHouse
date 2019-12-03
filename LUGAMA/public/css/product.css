@@ -84,3 +84,14 @@ div.might-like-product-name{
 div.might-like-product-price{
   font-weight: bold;
 }
+
+@media screen and (max-width: 768px){
+  div.conteiner{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  h2.product-price{
+    
+  }
+}

@@ -48,4 +48,7 @@ Route::get('/buildpc/auriculares', 'ProductController@category')->name('build');
 
 Route::get('/search', 'ProductController@search')->name('search');
 
-Route::get('/admin', 'HomeController@index')->name('admin')->middleware('auth');
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('/addproduct', 'AdminController@index')->name('addproduct');
+    Route::post('/addproducttodb', 'AdminController@createProduct')->name('addproducttodb');
+});

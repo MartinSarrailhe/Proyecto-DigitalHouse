@@ -42,15 +42,20 @@
 @include('search-bar')
 
 <div class="content">
-        <img class="banner-nvidia" src="img/widenvidia.jpg" alt="">
+
+        <div class="img-button">
+          <img class="banner-nvidia" src="img/widenvidia-1.png" alt="">
+          <button id="anterior"><</button>
+          <button id="siguiente">></button>
+        </div>
 
         <div class="popular-products text-center">
           <h3 class="popular-products">Más populares</h3>
           <section class="populars-section">
                 @forelse ($products as $product)
                   <article class="products">
-                    <a class="product-img" href="#"> <img class="product-image" src="/img/{{ $product->featured_img }}" alt=""> </a>
-                    <a class="name-product" href="#"> <span class="product-name">{{ $product->name }}</span> </a>
+                    <a class="product-img" href="{{route('product.show', $product->id)}}"> <img class="product-image" src="/img/{{ $product->featured_img }}" alt=""> </a>
+                    <a class="name-product" href="{{route('product.show', $product->id)}}"> <span class="product-name">{{ $product->name }}</span> </a>
                     <div class="product-price">${{ $product->price }}</div>
                   </article>
                 @empty
@@ -58,10 +63,11 @@
                 @endforelse
           </section>
           <div class="div-button">
-              <button class="more-products-button" type="button" name="button">ver más productos</button>
+              <button class="more-products-button" type="button" name="button"><a href="{{url('/products')}}">ver más productos</a></button>
           </div>
         </div> <!-- fin de productos -->
 </div>
 
 @include('footer')
 {{-- @endsection --}}
+<script src="{{ asset('js/landing-page.js')}}"></script>

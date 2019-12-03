@@ -27,7 +27,12 @@
         @if (Route::has('login'))
             <div class="login-register">
                 @auth
+                  @if (Auth::user()->is_admin == 1)
+                    <a href="{{ route('addproduct') }}">Agregar producto</a>
+                  @endif
+
                     <a href="{{ url('/home') }}">Bienvenido: {{ Auth::user()->name }}</a>
+                    <a href="{{ url('/history') }}">Mis compras</a>
                     <a href="{{ route('logout') }}"
                                               onclick="event.preventDefault();
                                               document.getElementById('logout-form').submit();">Cerrar sesión</a>

@@ -1,0 +1,19 @@
+/* addproduct.blade */
+
+form.addproduct-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.form-group{
+  width: 50%;
+}
+
+div.form-group-button{
+  margin-bottom: 15vh;
+}
+
+button.addproduct-button {
+  width: 100%;
+}

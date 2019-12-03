@@ -27,6 +27,7 @@ class HomeController extends Controller
         // return view('home');
         $products = Product::inRandomOrder()->take(8)->get();
 
-        return view('landing-page')->with('products', $products);
+        return view('home')->with('products', $products);
     }
+
 }

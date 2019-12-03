@@ -26,3 +26,16 @@ body {
 div.container {
   width: 60%;
 }
+
+div.login-register-button{
+  display: flex;
+  justify-content: space-between;
+}
+
+button.login-button, button.register-button{
+  width: 50%;
+  background-color:#3490dc;
+  color:white;
+  border:none;
+  padding:5px;
+}

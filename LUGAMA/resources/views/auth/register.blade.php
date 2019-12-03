@@ -58,7 +58,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password" class="">{{ __('Password') }}</label>
+                            <label for="password" class="">{{ __('Contraseña') }}</label>
 
                             <div class="">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -72,7 +72,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password-confirm" class="">{{ __('Confirmar Password') }}</label>
+                            <label for="password-confirm" class="">{{ __('Confirmar Contraseña') }}</label>
 
                             <div class="">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -80,8 +80,8 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="">
-                                <button type="submit" class="btn btn-primary">
+                            <div class="login-register-button">
+                                <button class="register-button" type="submit" class="btn btn-primary">
                                     Registrate
                                 </button>
                             </div>

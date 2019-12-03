@@ -30,7 +30,7 @@
                         @csrf
 
                         <div class="form-group">
-                            <label for="email" class="">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="">{{ __('Dirección de E-Mail') }}</label>
 
                             <div class="">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password" class="">{{ __('Password') }}</label>
+                            <label for="password" class="">{{ __('Contraseña') }}</label>
 
                             <div class="">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
@@ -70,8 +70,8 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="">
-                                <button type="submit" class="btn btn-primary">
+                            <div class="login-register-button">
+                                <button class="login-button" type="submit" class="btn btn-primary">
                                     Iniciar sesión
                                 </button>
 
