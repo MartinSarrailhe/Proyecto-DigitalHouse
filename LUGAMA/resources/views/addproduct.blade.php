@@ -58,31 +58,31 @@
                     <label for="category_id" class="">{{ __('Categoria del producto') }}:</label>
 
                     <div class="" style="display:flex;align-items:center;">
-                        <input id="category_id" type="radio" class="form-control" name="category_id" value="1" style="width:1em;height:1em;"> Auriculares
+                        <input id="category_id" type="radio" class="form-control" name="category_id" value="9" style="width:1em;height:1em;"> Auriculares
                     </div>
                     <div class="" style="display:flex;align-items:center;">
-                        <input id="category_id" type="radio" class="form-control" name="category_id" value="2" style="width:1em;height:1em;"> Gabinetes
+                        <input id="category_id" type="radio" class="form-control" name="category_id" value="4" style="width:1em;height:1em;"> Gabinetes
                     </div>
                     <div class="" style="display:flex;align-items:center;">
                         <input id="category_id" type="radio" class="form-control" name="category_id" value="3" style="width:1em;height:1em;"> Memorias RAM
                     </div>
                     <div class="" style="display:flex;align-items:center;">
-                        <input id="category_id" type="radio" class="form-control" name="category_id" value="4" style="width:1em;height:1em;"> Monitores
+                        <input id="category_id" type="radio" class="form-control" name="category_id" value="6" style="width:1em;height:1em;"> Monitores
                     </div>
                     <div class="" style="display:flex;align-items:center;">
-                        <input id="category_id" type="radio" class="form-control" name="category_id" value="5" style="width:1em;height:1em;"> Motherboards
+                        <input id="category_id" type="radio" class="form-control" name="category_id" value="1" style="width:1em;height:1em;"> Motherboards
                     </div>
                     <div class="" style="display:flex;align-items:center;">
-                        <input id="category_id" type="radio" class="form-control" name="category_id" value="6" style="width:1em;height:1em;"> Mouses
+                        <input id="category_id" type="radio" class="form-control" name="category_id" value="7" style="width:1em;height:1em;"> Mouses
                     </div>
                     <div class="" style="display:flex;align-items:center;">
-                        <input id="category_id" type="radio" class="form-control" name="category_id" value="7" style="width:1em;height:1em;"> Placas de video
+                        <input id="category_id" type="radio" class="form-control" name="category_id" value="5" style="width:1em;height:1em;"> Placas de video
                     </div>
                     <div class="" style="display:flex;align-items:center;">
-                        <input id="category_id" type="radio" class="form-control" name="category_id" value="8" style="width:1em;height:1em;"> Procesadores
+                        <input id="category_id" type="radio" class="form-control" name="category_id" value="2" style="width:1em;height:1em;"> Procesadores
                     </div>
                     <div class="" style="display:flex;align-items:center;">
-                        <input id="category_id" type="radio" class="form-control" name="category_id" value="9" style="width:1em;height:1em;"> Teclados
+                        <input id="category_id" type="radio" class="form-control" name="category_id" value="8" style="width:1em;height:1em;"> Teclados
                     </div>
 
                 </div>

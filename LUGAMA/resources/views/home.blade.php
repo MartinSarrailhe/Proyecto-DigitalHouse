@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
     <link rel="stylesheet" href="{{ asset('css/landing-page.css')}}">
     <link rel="stylesheet" href="{{ asset('css/register.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/home.css')}}">
+
 </head>
 
 {{-- @section('content') --}}

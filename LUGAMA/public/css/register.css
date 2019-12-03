@@ -39,3 +39,18 @@ button.login-button, button.register-button{
   border:none;
   padding:5px;
 }
+
+@media screen and (max-width: 576px){
+  div.login-register-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  button.login-button, button.register-button{
+    width: 100%;
+    background-color:#3490dc;
+    color:white;
+    border:none;
+    padding:5px;
+  }
+}
