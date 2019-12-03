@@ -13,15 +13,23 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
         Category::insert([
-          ['name' => 'Auriculares'],
-          ['name' => 'Gabinetes'],
-          ['name' => 'Memorias RAM'],
-          ['name' => 'Monitores'],
           ['name' => 'Motherboards'],
-          ['name' => 'Mouses'],
-          ['name' => 'Placas de video'],
           ['name' => 'Procesadores'],
-          ['name' => 'Teclados']
+          ['name' => 'Memorias RAM'],
+          ['name' => 'Gabinetes'],
+          ['name' => 'Placas de video'],
+          ['name' => 'Monitores'],
+          ['name' => 'Mouses'],
+          ['name' => 'Teclados'],
+          ['name' => 'Auriculares']
+
+
+
+
+
+
+
+
         ]);
     }
 }

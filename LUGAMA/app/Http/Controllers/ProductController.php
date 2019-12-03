@@ -101,6 +101,16 @@ class ProductController extends Controller
       ]);
 
     }
+
+    public function cpu(){
+
+      $products = Product::where('category_id', 8)->get();
+
+      return view('cpu')->with([
+        'products' => $products,
+      ]);
+
+    }
     /**
      * Show the form for editing the specified resource.
      *
@@ -112,6 +122,18 @@ class ProductController extends Controller
         //
     }
 
+    public function buildpc($id)
+    {
+      $products = Product::where('category_id', $id)->get();
+      $categories = Category::all();
+      $categoria = Category::find($id);
+      return view('buildpc')->with([
+        'products' => $products,
+        'categories' => $categories,
+        'categoria' => $categoria,
+      ]);
+
+    }
     /**
      * Update the specified resource in storage.
      *

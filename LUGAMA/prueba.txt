@@ -1,0 +1,2 @@
+            <li> <a class="burguer-links" href="{{route('buildpc', '8')}}">ARMA TU PC</a> </li>
+            Route::get('/buildpc/{categoria}', 'ProductController@buildpc')->name('buildpc');

@@ -58,6 +58,22 @@ class CartController extends Controller
       return redirect('/cart');
     }
 
+    public function producto(Request $request)
+    {
+      $product = Product::find($request->id);
+      $item = new Cart;
+      $item->name = $product->name;
+      $item->description = $product->description;
+      $item->price = $product->price;
+      $item->featured_img = $product->featured_img;
+      $item->quantity = 1;
+      $item->user_id = Auth::user()->id;
+      $item->status = 0; //producto no comprado.
+      $item->cart_number = 0;
+      $item->save();
+      return redirect('/buildpc/'.($product->category_id+1));
+    }
+
     /**
      * Display the specified resource.
      *

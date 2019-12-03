@@ -24,12 +24,12 @@
       @include('search-bar')
 
       <div class="container">
-        <h2>Mis compras</h2>
+        <h2 class="miscompras">Mis compras</h2>
           @forelse ($carts as $cart_number => $cart)
-            <p>Carrito nº: {{$cart_number}}</p>
+            <p class="carritonum">Carrito nº: {{$cart_number}}</p>
             <ul>
             @forelse ($cart as $item)
-              <li>Producto: {{$item->name}}</li>
+              <li class="productomiscompras">Producto: {{$item->name}}</li>
             @empty
               <p>No hay productos para este carrito.</p>
             @endforelse

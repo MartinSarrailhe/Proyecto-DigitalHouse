@@ -245,14 +245,98 @@ div.redesociales{
   justify-content: space-around;
 }
 
+.armatupcimg{
+  width: 35%;
+  padding-top: 15px;
+  display:block;
+  border-radius: 10px 10px 10px 10px;
+  margin: 0 auto;
+}
+
+.mother{
+  text-align: center;
+  font-weight: bold;
+  padding-top: 30px;
+  width: 100%;
+  border-bottom-style: solid;
+}
+
+.miscompras{
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  padding-top: 20px;
+
+}
+
+.carritonum{
+
+  font-size: 2em;
+  border-bottom: green solid 1px;
+
+}
+
+.productomiscompras{
+  font-size: 1.5em;
+
+}
+
+.mothersubmit{
+
+  width: 80%;
+  margin: 0 auto;
+}
+.omitir{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.omitirfinal{
+
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+}
+
+.omitirtexto{
+
+  color: black;
+  font-weight: bold;
+  font-size: 1.5em;
+
+}
+
+
 @media screen and (max-width: 1024px) {
   .nav-links{
     width: 60%;
+  }
+
+  .armatupcimg{
+    width: 40%;
+  }
+
+  div.seach-box{
+    padding-bottom: 0;
   }
 }
 
 @media screen and (max-width: 768px){
   a.logo-letras{
+    display: none;
+  }
+
+  div.seach-box{
+    padding-bottom: 0;
+  }
+
+  .armatupcimg{
+    width: 60%;
+  }
+
+  .bienvenido{
     display: none;
   }
 

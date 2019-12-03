@@ -19,7 +19,7 @@
           <ul class="nav-links">
             <li> <a class="burguer-links" href="{{url('/')}}">Inicio</a> </li>
             <li> <a class="burguer-links" href="{{url('/products')}}">Productos</a> </li>
-            <li> <a class="burguer-links" href="{{route('mother')}}">ARMA TU PC</a> </li>
+            <li> <a class="burguer-links" href="{{route('buildpc', '1')}}">ARMA TU PC</a> </li>
           </ul>
 
 
@@ -31,7 +31,7 @@
                     <a href="{{ route('addproduct') }}">Agregar producto</a>
                   @endif
 
-                    <a href="{{ url('/home') }}">Bienvenido: {{ Auth::user()->name }}</a>
+                    <a class="bienvenido" href="{{ url('/home') }}">Bienvenido: {{ Auth::user()->name }}</a>
                     <a href="{{ url('/history') }}">Mis compras</a>
                     <a href="{{ route('logout') }}"
                                               onclick="event.preventDefault();

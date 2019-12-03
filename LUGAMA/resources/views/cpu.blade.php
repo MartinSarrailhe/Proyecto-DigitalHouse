@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Productos - LUGAMA</title>
+        <title>ARMA TU PC - LUGAMA</title>
 
         <!--Fuente-->
         <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
@@ -21,7 +21,8 @@
       @include('header')
 
       @include('search-bar')
-
+      <img class="armatupcimg" src="/img/armatupc.png" alt="">
+      <h1 class="mother">Procesador</h1>
       <div class="products-container">
 
 
